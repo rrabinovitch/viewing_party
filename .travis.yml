@@ -1,13 +1,17 @@
-langauge: ruby
+language: ruby
 rbenv:
 - 2.5.3
 addons:
-  postgresql: 9.6
+  postgresql: 11.0
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
 deploy:
   provider: heroku
   api_key:
-  app:
-  run: rails db:migrate
+    secure: NPHjSHhH+KR5gGNGKA4UvzuXiTGYCAzm+YtkGtB+WzKv777R63EKLuCTuvNAYqOU2DO8e4y/M9+raIP6RdEJ5/OQbtEoZr2n0++eouTdR8FyP2Y/oMXI5ZIS7uHOAb51zsSoe0lkWUoGOmyIlbOWEd6qcjQSFyy87C8FgF2ugHu6mckKSdmUSNDzwlsDtAO5gytTFZ+jHaLwdDpR895G6xh1cExvIswVRJYqc/U8Re+r/MNzb+tWwCNT/kDd3E6kjYRJQ523SkRGLrVt2M8Kfa/erUFTJvbBYcuZt1B3kfr8SUZlMiydifnfiT82Pe4360OJJv+NEnReIVFSopmiKofFXLEbbE6G1EkptUHptl6zN4gELnyZ6XjUcxbDJLRliaTxvUUtcY70PcSPG0X9KaMAkRbz6Nm8peceuH/9dSCoW7klQTILfPiptmd772W+BbdYXSIlDDUsBVp18aSbKOsql9IxsC/9GUMmGMI8TcF5izvaeSbvJuBlAqVBqpGiXzRoof9hSEX3HRCRGpbjy+EcrD/YT45te2/YYiXQWSSzmGrXPmJNWBiC3SFaU294eCv1bAda0it+yCkrHL4TiBjsNOSKSsk5lf+lDu18X/KdjHTN6CfB2KJC7+Mf1XBlbGT+FwmyaooWbDd7APUxnjXECC3JVvhHzQXIWcUqMDM=
+  app: calm-chamber-19158
+  on:
+    repo: rrabinovitch/viewing_party
+    branch: main
+  skip_cleanup: 'true'

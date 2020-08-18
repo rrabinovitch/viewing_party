@@ -2,12 +2,7 @@ language: ruby
 rbenv:
 - 2.5.3
 addons:
-  postgresql: 12
-  apt:
-    packages:
-    - postgresql-12
-    - postgresql-client-12
-dist: xenial
+  postgresql: 9.6
 script:
 - bundle exec rails db:{create,migrate} RAILS_ENV=test
 - bundle exec rspec
@@ -20,3 +15,4 @@ deploy:
     repo: rrabinovitch/viewing_party
     branch: main
   skip_cleanup: 'true'
+  run: rails db:migrate

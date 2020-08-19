@@ -8,6 +8,7 @@ class User < ApplicationRecord
     where(user_id: auth.uid).first_or_create do |user|
       user.token = auth.credentials.token
       user.refresh_token = auth.credentials.refresh_token
+      user.username = auth.info.email
     end
   end
 end

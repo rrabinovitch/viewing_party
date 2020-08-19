@@ -19,7 +19,7 @@ SimpleCov.start 'rails'
 OmniAuth.config.test_mode = true
 omniauth_hash = {
   provider: 'google',
-  uid: '1234',
+  uid: '7777',
   info: {
     email: 'gmendez90@gmail.com',
     first_name: 'Gaby'
@@ -27,10 +27,10 @@ omniauth_hash = {
   credentials: {
     token: "abcdefg12345",
     refresh_token: "12345abcdefg",
-    expires_at: DateTime.now,
+    expires_at: DateTime.now + 2.minutes,
   }
 }
-OmniAuth.config.mock_auth[:google] = OmniAuth::AuthHash.new(omniauth_hash)
+OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new(omniauth_hash)
 
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|

@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
   def create
     access_token = request.env["omniauth.auth"]
+    require "pry"; binding.pry
     user = User.from_omniauth(access_token)
     user.token = access_token.credentials.token
     refresh_token = access_token.credentials.refresh_token

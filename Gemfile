@@ -19,6 +19,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   gem 'pry'
   gem 'travis'
+  gem 'figaro'
 end
 
 group :development do
@@ -26,7 +27,6 @@ group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'rubocop-rails'
   gem 'travis'
-  gem 'figaro'
 end
 
 group :test do

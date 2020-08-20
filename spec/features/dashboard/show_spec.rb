@@ -26,7 +26,7 @@ RSpec.describe 'dashboard show page' do
 
       within(".friends") do
         expect(page).to_not have_content(existing_user.username)
-        fill_in :friend_email, with: existing_user.username
+        fill_in :email, with: existing_user.username
         click_button "Add Friend"
       end
 

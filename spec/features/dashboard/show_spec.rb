@@ -54,7 +54,6 @@ RSpec.describe 'dashboard show page' do
     end
 
     it "the dashboard has a 'Viewing Parties' section" do
-      expect(page).to have_css(".viewing-parties") # repetetive but including this until the rest of the section is built out
       within(".viewing-parties") do
         expect(page).to have_content("You have no viewing parties coming up.")
       end

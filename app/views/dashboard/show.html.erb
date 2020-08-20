@@ -9,7 +9,15 @@
     <%= email_field_tag :email  %>
     <%= submit_tag "Add Friend" %>
   <% end %>
-  <p>You currently have no friends.</p>
+  <% unless current_user.friends.empty? %>
+    <% current_user.friends.each do |friend| %>
+      <ul class="friends-list">
+        <li><%= friend.username %></li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>You currently have no friends.</p>
+  <% end %>
 </section>
 
 <section class="viewing-parties">

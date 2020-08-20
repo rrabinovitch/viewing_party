@@ -36,7 +36,8 @@ RSpec.describe 'dashboard show page' do
       expect(page).to have_content("You have added #{existing_user.username} as a friend.")
 
       within(".friends") do
-        expect(page).to have_content(friend_email)
+        expect(page).to have_content(existing_user.username)
+        expect(page).to_not have_content("You currently have no friends.")
       end
     end
 

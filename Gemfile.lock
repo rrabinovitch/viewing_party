@@ -284,6 +284,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   figaro
   jbuilder (~> 2.5)
+  json
   launchy
   listen (>= 3.0.5, < 3.2)
   omniauth-google-oauth2

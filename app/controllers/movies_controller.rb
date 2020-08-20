@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
       req.params['language'] = 'en-US'
       req.params['page'] = '2'
     end
-
+    
     json1 = JSON.parse(page1.body, symbolize_names: true)
     json2 = JSON.parse(page2.body, symbolize_names: true)
 

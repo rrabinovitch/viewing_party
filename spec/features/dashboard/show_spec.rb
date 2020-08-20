@@ -45,12 +45,12 @@ RSpec.describe 'dashboard show page' do
       that the user does not exist" do
       nonexistant_user = "noodle@gmail.com"
       within(".friends") do
-        fill_in :friend_email, with: nonexistant_user
+        fill_in :email, with: nonexistant_user
         click_button "Add Friend"
       end
 
       expect(current_path).to eq(dashboard_path)
-      expect(page).to have_content("#{nonexistant_user} does not exist.")
+      expect(page).to have_content("User with email #{nonexistant_user} does not exist.")
     end
 
     it "the dashboard has a 'Viewing Parties' section" do

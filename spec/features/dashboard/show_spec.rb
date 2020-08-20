@@ -15,7 +15,7 @@ RSpec.describe 'user can log in' do
     it "the dashboard has a 'Discover Movies' button" do
       expect(page).to have_button("Discover Movies")
       click_button "Discover Movies"
-      # expect(current_path).to eq()
+      expect(current_path).to eq(discover_path)
     end
 
     it "the dashboard has a 'Friends' section" do

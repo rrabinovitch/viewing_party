@@ -3,6 +3,13 @@
 <%= button_to "Discover Movies", discover_path, method: :get %>
 
 <section class="friends">
+  <center>
+  <%= form_tag friendships_path, method: :post do %>
+    <%= label_tag :friend_email, "Friend's Email" %>
+    <%= email_field_tag :email  %>
+    <%= submit_tag "Add Friend" %>
+  <% end %>
+</center>
   <%# <%=# button_to "Add Friend", discover_path, method: :get %> %>
   <p>You currently have no friends.</p>
 </section>

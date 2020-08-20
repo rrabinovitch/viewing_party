@@ -3,8 +3,6 @@ RSpec.describe 'dashboard show page' do
     before :each do
       visit root_path
       click_on "Login"
-      existing_user_attributes = {}
-      @existing_user = User.create!()
     end
 
     it "the dashboard has a 'Discover Movies' button that redirects me to a discover page" do
@@ -24,21 +22,20 @@ RSpec.describe 'dashboard show page' do
     end
 
     it "when I enter a friend's email associated with another existing user, they are added
-      to my friends list, which displays their email" do
+      to my friends list, which displays their email (referenced as username)" do
       # confirm whether user stories specify *what* details should be displayed for each friend
+      existing_user = User.create!(user_id: 123, username: "ruthie@gmail.com", token: "123ruthie", refresh_token: "ruthie123")
 
-      # create a stub for existing user??
-      existing_user = "ruthie@gmail.com"
       within(".friends") do
-        expect(page).to_not have_content(existing_user)
-        fill_in :friend_email, with: existing_user
+        expect(page).to_not have_content(existing_user.username)
+        fill_in :friend_email, with: existing_user.username
         click_button "Add Friend"
       end
 
       expect(current_path).to eq(dashboard_path)
       # if we use a partial to have the flash message appear within the friends section instead
       # of at the top of the page, this expectation can be moved into the within(".friends") block below
-      expect(page).to have_content("You have added #{existing_user} as a friend.")
+      expect(page).to have_content("You have added #{existing_user.username} as a friend.")
 
       within(".friends") do
         expect(page).to have_content(friend_email)

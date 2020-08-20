@@ -12,9 +12,7 @@ RSpec.describe 'dashboard show page' do
     end
 
     it "the dashboard has a 'Friends' section with a 'no friends' message if I haven't added any friends" do
-      expect(page).to have_css(".friends") # repetetive but including this until the rest of the section is built out
       within(".friends") do
-        # alternative field name: friend_search_field ?
         expect(page).to have_selector("#email")
         expect(page).to have_button("Add Friend")
         expect(page).to have_content("You currently have no friends.")

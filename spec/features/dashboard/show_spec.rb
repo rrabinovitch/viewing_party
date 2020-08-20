@@ -3,6 +3,8 @@ RSpec.describe 'dashboard show page' do
     before :each do
       visit root_path
       click_on "Login"
+      existing_user_attributes = {}
+      @existing_user = User.create!()
     end
 
     it "the dashboard has a 'Discover Movies' button that redirects me to a discover page" do
@@ -14,6 +16,7 @@ RSpec.describe 'dashboard show page' do
     it "the dashboard has a 'Friends' section with a 'no friends' message if I haven't added any friends" do
       expect(page).to have_css(".friends") # repetetive but including this until the rest of the section is built out
       within(".friends") do
+        # alternative field name: friend_search_field ?
         expect(page).to have_field("#friend-email")
         expect(page).to have_button("Add Friend")
         expect(page).to have_content("You currently have no friends.")
@@ -23,10 +26,11 @@ RSpec.describe 'dashboard show page' do
     it "when I enter a friend's email associated with another existing user, they are added
       to my friends list, which displays their email" do
       # confirm whether user stories specify *what* details should be displayed for each friend
+
+      # create a stub for existing user??
       existing_user = "ruthie@gmail.com"
       within(".friends") do
         expect(page).to_not have_content(existing_user)
-        # alternative field name: friend_search_field ?
         fill_in :friend_email, with: existing_user
         click_button "Add Friend"
       end

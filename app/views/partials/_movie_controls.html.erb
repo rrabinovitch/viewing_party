@@ -1,0 +1,6 @@
+<%= button_to "Find Top Rated Movies", movies_path, method: :get %>
+
+<%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :movie_keywords %>
+  <%= submit_tag "Find Movies" %>
+<% end %>

@@ -1,9 +1,6 @@
 class User < ApplicationRecord
-  has_many :friended_users, foreign_key: :friender_id, class_name: 'Friend'
-  has_many :friendees, through: :friended_users
-
-  has_many :friendee_users, foreign_key: :friendee_id, class_name: 'Friend'
-  has_many :frienders, through: :friendee_users
+  has_many :friendships, dependent: :destroy
+  has_many :friends, through: :friendships
 
   def self.from_omniauth(auth)
     user = User.find_by(user_id: auth[:uid]) || User.new

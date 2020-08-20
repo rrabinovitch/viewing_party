@@ -1,10 +1,26 @@
 <%= button_to "Discover Movies", discover_path, method: :get %>
 
 <section class="friends">
-  <%# <%=# button_to "Add Friend", discover_path, method: :get %> 
+  <%# <%=# button_to "Add Friend", discover_path, method: :get %>
   <p>You currently have no friends.</p>
+  <h2>Friends</h2>
+  <%= form_tag friendships_path, method: :post do %>
+    <%= label_tag :friend_email, "Friend's Email" %>
+    <%= email_field_tag :email  %>
+    <%= submit_tag "Add Friend" %>
+  <% end %>
+  <% unless current_user.friends.empty? %>
+    <% current_user.friends.each do |friend| %>
+      <ul class="friends-list">
+        <li><%= friend.username %></li>
+      </ul>
+    <% end %>
+  <% else %>
+    <p>You currently have no friends.</p>
+  <% end %>
 </section>
 
 <section class="viewing-parties">
+  <h2>Viewing Parties</h2>
   <p>You have no viewing parties coming up.</p>
 </section>

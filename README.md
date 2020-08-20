@@ -5,7 +5,7 @@ This is the base repo for the viewing party project used for Turing's Backend Mo
 
 ### About this Project
 
-Viewing party is an application in which users can explore movie options and create a viewing party event for the user and friend's.
+Viewing party is an application in which users can explore movie options and create a viewing party event for the user and their friends.
 
 ## Local Setup
 

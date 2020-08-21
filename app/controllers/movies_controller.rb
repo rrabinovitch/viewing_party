@@ -14,12 +14,9 @@ class MoviesController < ApplicationController
       req.params['language'] = 'en-US'
       req.params['page'] = '2'
     end
-    
+
     json1 = JSON.parse(page1.body, symbolize_names: true)
     json2 = JSON.parse(page2.body, symbolize_names: true)
-
-    @movies_pg1 = json1[:results]
-    @movies_pg2 = json2[:results]
 
     until json2[:results].count == 0
       json1[:results] << json2[:results].shift

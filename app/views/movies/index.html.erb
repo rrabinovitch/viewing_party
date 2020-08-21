@@ -1,0 +1,9 @@
+<%= render '/partials/movie_controls' %>
+<section class="top40">
+<!-- top 40 rated movies from API here -->
+  <% @movies.each do |movie| %>
+    <div class="movie">
+      <h4><%= link_to movie[:title], "/movies?id=#{movie[:id]}", class: "movie-title" %> / <%= movie[:vote_average] %></h4>
+    </div>
+  <% end %>
+</section>

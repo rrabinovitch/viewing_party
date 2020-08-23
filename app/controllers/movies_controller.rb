@@ -23,6 +23,10 @@ class MoviesController < ApplicationController
     json1[:results] << json2[:results].shift until json2[:results].count.zero?
 
     @movies = json1[:results]
+    # @movies = json1[:results].map do |movie_data|
+    #   Movie.new(movie_data)
+    # end
+
   end
 
   def show

@@ -13,6 +13,7 @@
 # it.
 #
 require 'rails_helper'
+# require 'webmock/rspec'
 require 'simplecov'
 SimpleCov.start 'rails'
 
@@ -120,3 +121,10 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+# VCR.configure do |config|
+#   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
+#   config.hook_into :webmock
+#   config.filter_sensitive_data('<MOVIE_DB_API_KEY_V3>') { ENV['MOVIE_DB_API_KEY_V3'] }
+#   config.configure_rspec_metadata!
+# end

@@ -1,4 +1,6 @@
 class FriendshipsController < ApplicationController
+  before_action :require_login
+
   def create
     friend_email = params[:email]
     @friend = User.find_by(username: friend_email)
@@ -12,8 +14,6 @@ class FriendshipsController < ApplicationController
     redirect_to dashboard_path
   end
 end
-
-
 
 # def create
 #   #is this bulk addition or individual addition?

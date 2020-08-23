@@ -3,7 +3,7 @@
 <!-- top 40 rated movies from API here -->
   <% @movies.each do |movie| %>
     <div class="movie">
-      <h4><%= link_to movie[:title], "/movies?id=#{movie[:id]}", class: "movie-title" %> / <%= movie[:vote_average] %></h4>
+      <h4><%= link_to movie.title, "/movies/detail?id=#{movie.id}", class: "movie-title" %> / <%= movie.vote_avg %></h4>
     </div>
   <% end %>
 </section>

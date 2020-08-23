@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :require_login
 
   def index
-    @movies = SearchResults.new.top_rated_forty
+    @movies = SearchResults.new.top_forty
   end
 
   def show

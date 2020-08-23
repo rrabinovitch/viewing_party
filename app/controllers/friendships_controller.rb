@@ -1,4 +1,6 @@
 class FriendshipsController < ApplicationController
+  before_action :require_login
+
   def create
     friend_email = params[:email]
     @friend = User.find_by(username: friend_email)

@@ -1,4 +1,6 @@
 class MoviesController < ApplicationController
+  before_action :require_login
+
   def index
     # Refactor this disaster into a MovieDB Poro?
     conn = Faraday.new(url: 'https://api.themoviedb.org', headers: { 'Accept': 'application/json' })

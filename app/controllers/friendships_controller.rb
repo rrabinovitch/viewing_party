@@ -15,8 +15,6 @@ class FriendshipsController < ApplicationController
   end
 end
 
-
-
 # def create
 #   #is this bulk addition or individual addition?
 #   if params.include?(:friend_id) #individual e.g. "Add friend" link

@@ -1,11 +1,10 @@
 # movies/index_spec.rb
 RSpec.describe 'As an authenticated user' do
   before :each do
-    visit root_path
-    click_on "Login"
 
-    # stub current_user instead of logging in every time?
-    # allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@user)
+    user = User.new(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
   end
 
   it 'When I visit the movies page, I should see the 40 results from my search, I should also see the "Find Top Rated Movies" button and the Find Movies form at the top of the page.' do

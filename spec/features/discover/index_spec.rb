@@ -1,11 +1,12 @@
 RSpec.describe 'As an authenticated user' do
   before :each do
-    visit root_path
-    click_on "Login"
+    user = User.new(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
+
+    allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
   end
 
   it 'I should see a button to discover top-rated movies; when I click on it, I\'m taken to the Movies page' do
-    
+
     visit discover_path
     click_on "Find Top Rated Movies"
     expect(current_path).to eq(movies_path)

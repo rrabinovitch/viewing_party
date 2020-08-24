@@ -12,6 +12,13 @@ class SearchResults
     end
   end
 
+  def keyword_results(keywords)
+    movies = @service.keyword_search(keywords)[:results]
+    movies.map do |movie_data|
+      get_movie(movie_data[:id])
+    end
+  end
+
   def get_cast_members(movie_id)
     @service.movie_cast(movie_id).map do |member_data|
       CastMember.new(member_data)

@@ -8,6 +8,15 @@ class MovieDBService
     parse(response)
   end
 
+  def keyword_search(keywords)
+    response = conn.get('/3/search/movie') do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+      req.params['language'] = 'en-US'
+      req.params['query'] = keywords
+    end
+    parse(response)
+  end
+
   def movie_details(id)
     response = conn.get("/3/movie/#{id}") do |req|
       req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']

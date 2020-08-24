@@ -11,9 +11,14 @@ class Movie
       genre_hash[:name]
     end
     @runtime = movie_data[:runtime]
+    @search_results ||= SearchResults.new
   end
 
   def first_ten_cast_members
-    SearchResults.new.get_cast_members(@id).first(10)
+    @search_results.get_cast_members(@id).first(10)
+  end
+
+  def reviews
+    @search_results.get_reviews(@id)
   end
 end

@@ -28,7 +28,7 @@ class MovieDBService
       req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
       req.params['language'] = 'en-US'
     end
-    parse(response)[:results]
+    parse(response)
   end
 
   private

@@ -16,3 +16,10 @@
   <li><%= member.name %> -- as <%= member.character %></li>
 <% end %>
 </ul>
+<h4>Reviews(<%= @movie.reviews.count %>)</h4>
+<div class="movie-review">
+  <% @movie.reviews.each do |review| %>
+    <em>By: <%= review.author %></em>
+    <p><%= review.content %></p>
+  <% end %>
+</div>

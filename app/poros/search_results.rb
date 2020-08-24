@@ -12,8 +12,8 @@ class SearchResults
     end
   end
 
-  def get_cast_members(id)
-    @service.movie_cast(id).map do |member_data|
+  def get_cast_members(movie_id)
+    @service.movie_cast(movie_id).map do |member_data|
       CastMember.new(member_data)
     end
   end
@@ -21,5 +21,11 @@ class SearchResults
   def get_movie(id)
     movie_data = @service.movie_details(id)
     Movie.new(movie_data)
+  end
+
+  def get_reviews(movie_id)
+    @service.movie_reviews(movie_id)[:results].map do |review_data|
+      Review.new(review_data)
+    end
   end
 end

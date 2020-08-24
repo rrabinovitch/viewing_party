@@ -25,16 +25,16 @@ RSpec.describe 'As an authenticated user' do
     - count of total reviews
     - each review author and info' do
 
-      visit discover_path
-      click_on "Find Top Rated Movies"
-      expect(current_path).to eq(movies_path)
+      VCR.use_cassette('first_of_top_forty_movies') do
+        visit discover_path
+        click_on "Find Top Rated Movies"
+        expect(current_path).to eq(movies_path)
 
-      find('.movie-title', match: :first).click
-      expect(current_path).to eq(movies_detail_path)
-      expect(page).to have_button("New Viewing Party")
-
-      # http request stubs aren't working...
-      # expect one movie's details here.
+        find('.movie-title', match: :first).click
+        expect(current_path).to eq(movies_detail_path)
+        expect(page).to have_button("New Viewing Party")
+        # expect one movie's details here.
+      end
     end
   end
 

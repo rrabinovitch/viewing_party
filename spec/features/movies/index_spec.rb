@@ -23,12 +23,13 @@ RSpec.describe 'As an authenticated user' do
   end
 
   it 'When I click on a movie title link, I should be redirected to the movie\'s details page' do
+    VCR.use_cassette('first_of_top_forty_movies') do
+      visit discover_path
+      click_on "Find Top Rated Movies"
+      expect(current_path).to eq(movies_path)
 
-    visit discover_path
-    click_on "Find Top Rated Movies"
-    expect(current_path).to eq(movies_path)
-
-    find('.movie-title', match: :first).click
-    expect(current_path).to eq(movies_detail_path)
+      find('.movie-title', match: :first).click
+      expect(current_path).to eq(movies_detail_path)
+    end
   end
 end

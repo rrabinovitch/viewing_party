@@ -20,7 +20,7 @@ RSpec.describe 'As an authenticated user' do
     expect(page).to have_button("Find Movies")
   end
 
-  xit 'When I submit a movie keyword search, I am taken to the movies page' do
+  it 'When I submit a movie keyword search, I am taken to the movies page' do
 
     VCR.use_cassette('dickie_roberts_search_results') do
       visit discover_path

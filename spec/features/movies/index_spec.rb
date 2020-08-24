@@ -36,7 +36,7 @@ RSpec.describe 'As an authenticated user' do
   end
 
   describe 'Movies index page: Keyword search' do
-    it 'Keyword search results with one result' do
+    it 'Search results with one movie' do
       VCR.use_cassette('dickie_roberts_search_results') do
         visit discover_path
         fill_in :movie_keywords, with: "Dickie Roberts"

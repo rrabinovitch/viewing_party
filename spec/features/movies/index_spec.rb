@@ -49,8 +49,17 @@ RSpec.describe 'As an authenticated user' do
       end
     end
 
-    # it 'Keyword search results with 40 results max' do
-    # => maybe search w keyword 'hello'?
-    # end
+    it 'Search results return maximum 40 movies' do
+      VCR.use_cassette('phoenix_search_results') do
+        visit discover_path
+        fill_in :movie_keywords, with: "Phoenix"
+        click_on "Find Movies"
+
+        expect(current_path).to eq(movies_path)
+        within('.search-results') do
+          expect(page).to have_selector(".movie-title", count: 40)
+        end
+      end
+    end
   end
 end

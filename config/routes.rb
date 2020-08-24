@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   get "/movies", to: "movies#index"
   get "/movies/detail", to: "movies#show"
   post "/friendships", to: "friendships#create"
+  get "/viewing_parties/new", to: "viewing_parties#new"
 end

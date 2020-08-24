@@ -8,6 +8,29 @@ class MovieDBService
     parse(response)
   end
 
+  def movie_details(id)
+    response = conn.get("/3/movie/#{id}") do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+      req.params['language'] = 'en-US'
+    end
+    parse(response)
+  end
+
+  def movie_cast(id)
+    response = conn.get("/3/movie/#{id}/credits") do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+    end
+    parse(response)[:cast]
+  end
+
+  def movie_reviews(id)
+    response = conn.get("/3/movie/#{id}/reviews") do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+      req.params['language'] = 'en-US'
+    end
+    parse(response)
+  end
+
   private
 
   def conn

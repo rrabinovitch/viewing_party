@@ -16,6 +16,13 @@ class MovieDBService
     parse(response)
   end
 
+  def movie_cast(id)
+    response = conn.get("/3/movie/#{id}/credits") do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+    end
+    parse(response)
+  end
+
   private
 
   def conn

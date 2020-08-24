@@ -1,1 +1,5 @@
-<%= button_to "New Viewing Party", "" %>
+<%= button_to "New Viewing Party", "/viewing_parties/new?movie_id=#{@movie.id}", method: :get %>
+
+<h3><%= @movie.title %></h3>
+<p>Vote Average: <%= @movie.vote_avg %></p>
+<p>Summary: <%= @movie.summary %></p>

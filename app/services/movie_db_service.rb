@@ -8,6 +8,14 @@ class MovieDBService
     parse(response)
   end
 
+  def find_by(id)
+    response = conn.get("/3/movie/#{id}") do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+      req.params['language'] = 'en-US'
+    end
+    parse(response)
+  end
+
   private
 
   def conn

@@ -60,6 +60,7 @@ RSpec.describe 'As an authenticated user' do
           expect(page).to have_selector(".movie-title", count: 40)
         end
       end
+      # PLAY AROUND WITH LOGIC FOR IDENTIFYING WHETHER THERE ARE MORE THAN 20 RESULTS AND ONLY THEN COLLECTING RESULTS FOR 2 PAGES
     end
   end
 end

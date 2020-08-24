@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US&query=Dickie%20Roberts
+    uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US&page=1&query=Dickie%20Roberts
     body:
       encoding: US-ASCII
       string: ''
@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Mon, 24 Aug 2020 21:12:58 GMT
+      - Mon, 24 Aug 2020 23:13:49 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,11 +42,11 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 9cefde3a3c84cc779d3c26a39c2e4430.cloudfront.net (CloudFront)
+      - 1.1 9204cf44179493ed42c678800a26918b.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - QF9PFkdVOOqnjG9eQyo57Bcvmu_lTHBhXseQA8YGoeCwNCrdRxEJmw==
+      - Oo6CvKBfSo3Yc6UW7MMoywyr5tSCF9cyAQERjAD2GDpQDrpsNYo6ZA==
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"total_results":1,"total_pages":1,"results":[{"popularity":11.449,"id":13778,"video":false,"vote_count":128,"vote_average":5.1,"title":"Dickie
@@ -57,7 +57,58 @@ http_interactions:
         director quickly sees he is anything but normal. Desperate to win the part,
         Dickie hires a family to help him replay his childhood and assume the identity
         of an average, everyday kid.","poster_path":"\/6dgCPSVEEMU2BLvxOzBAvkQjIeL.jpg"}]}'
-  recorded_at: Mon, 24 Aug 2020 21:12:58 GMT
+  recorded_at: Mon, 24 Aug 2020 23:13:49 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US&page=2&query=Dickie%20Roberts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '57'
+      Connection:
+      - keep-alive
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Date:
+      - Mon, 24 Aug 2020 23:13:49 GMT
+      Etag:
+      - 2bb8cfc3a3e9bf88239773a4c0bdedfc
+      Cache-Control:
+      - public, max-age=120
+      X-Cache:
+      - RefreshHit from cloudfront
+      Via:
+      - 1.1 29f1da35ce271d2cdc88184ed0c1f86d.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - DEN50-C2
+      X-Amz-Cf-Id:
+      - puERXPCACi0sgEyeu6w8O8fBprz3hDqmoylCpPzunRBfB6klEWY0DQ==
+    body:
+      encoding: UTF-8
+      string: '{"page":2,"total_results":1,"total_pages":1,"results":[]}'
+  recorded_at: Mon, 24 Aug 2020 23:13:49 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/13778?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
@@ -110,13 +161,15 @@ http_interactions:
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Miss from cloudfront
+      - Hit from cloudfront
       Via:
-      - 1.1 a47d45d25cc354507eae77aba89ca253.cloudfront.net (CloudFront)
+      - 1.1 28d79637e27f11e3ab19a9515e273a5b.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
-      - T2CR_2BHpSNpedkOCRUMXVGDMoMkbLU2bzS0RJ2qhl8FdkFcvGWl3w==
+      - KuSMKOjav9s3Zdvp_Bc_7_cNEXf33pmJ93WBPsmC9vic14XFj2KrUA==
+      Age:
+      - '7251'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":35,"name":"Comedy"}],"homepage":"","id":13778,"imdb_id":"tt0325258","original_language":"en","original_title":"Dickie
@@ -129,5 +182,5 @@ http_interactions:
         States of America"}],"release_date":"2003-09-05","revenue":0,"runtime":98,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"50
         million people used to watch him on TV. Now he washes their cars.","title":"Dickie
         Roberts: Former Child Star","video":false,"vote_average":5.1,"vote_count":128}'
-  recorded_at: Mon, 24 Aug 2020 21:12:58 GMT
+  recorded_at: Mon, 24 Aug 2020 23:13:49 GMT
 recorded_with: VCR 6.0.0

@@ -15,7 +15,11 @@ class SearchResults
   def keyword_results(keywords)
     page1 = @service.keyword_search(1, keywords)
     page2 = @service.keyword_search(2, keywords)
-    movies = page1[:results] << page2[:results].shift until page2[:results].size.zero?
+    if page2[:results].size.zero?
+      movies = page1[:results]
+    else
+      movies = page1[:results] << page2[:results].shift until page2[:results].size.zero?
+    end
     movies.map do |movie_data|
       get_movie(movie_data[:id])
     end

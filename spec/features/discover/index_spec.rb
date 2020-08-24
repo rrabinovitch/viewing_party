@@ -19,4 +19,12 @@ RSpec.describe 'As an authenticated user' do
     expect(page).to have_selector("#movie_keywords")
     expect(page).to have_button("Find Movies")
   end
+
+  it 'when I submit a movie keyword search, I am taken to the movies page' do
+
+    visit discover_path
+    fill_in :movie_keywords, with: "Dickie Roberts"
+    click_on "FInd Movies"
+    expect(current_path).to eq(movies_path)
+  end
 end

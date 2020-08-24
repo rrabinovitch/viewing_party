@@ -3,15 +3,6 @@ RSpec.describe 'As an authenticated user' do
     user = User.new(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-
-    # json_response1 = File.read('spec/fixtures/top_rated_movie1.json')
-    # json_response2 = File.read('spec/fixtures/top_rated_movie2.json')
-    #
-    # stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=033cf2fe940e095f326c2f128d70fdfa&language=en-US&page=1").
-    #   to_return(status: 200, body: json_response1)
-    #
-    # stub_request(:get, "https://api.themoviedb.org/3/movie/top_rated?api_key=033cf2fe940e095f326c2f128d70fdfa&language=en-US&page=2").
-    #   to_return(status: 200, body: json_response2)
   end
 
   describe 'movie details page' do

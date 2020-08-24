@@ -2,6 +2,7 @@ class MoviesController < ApplicationController
   before_action :require_login
 
   def index
+    binding.pry
     # if query params include keywords, perform that search,
     # else, show top40 results (those are the two routes to
     # get to this index action)

@@ -23,6 +23,14 @@ class MovieDBService
     parse(response)[:cast]
   end
 
+  def movie_reviews(id)
+    response = conn.get("/3/movie/#{id}/reviews") do |req|
+      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+      req.params['language'] = 'en-US'
+    end
+    parse(response)[:results]
+  end
+
   private
 
   def conn

@@ -10,3 +10,9 @@
   <li><%= genre %></li>
 <% end %>
 </ul>
+<p>Cast (top 10):</p>
+<ul>
+<% @movie.first_ten_cast_members.each do |member| %>
+  <li><%= member %></li>
+<% end %>
+</ul>

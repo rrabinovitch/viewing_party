@@ -12,4 +12,10 @@ class Movie
     end
     @runtime = movie_data[:runtime]
   end
+
+  def first_ten_cast_members
+    SearchResults.new.get_cast_members(@id).map do |cast_member|
+      cast_member.name
+    end.first(10)
+  end
 end

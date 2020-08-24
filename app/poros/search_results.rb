@@ -12,6 +12,12 @@ class SearchResults
     end
   end
 
+  def get_cast_members(id)
+    @service.movie_cast(id).map do |member_data|
+      CastMember.new(member_data)
+    end
+  end
+
   def get_movie(id)
     movie_data = @service.movie_details(id)
     Movie.new(movie_data)

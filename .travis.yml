@@ -16,3 +16,6 @@ deploy:
     branch: main
   skip_cleanup: 'true'
   run: rails db:migrate
+env:
+  global:
+    secure: hrFkr4WJTXdJCBKUH8+vPjLDPJ0ohwF5kwsYf23q6xsCMAyaacRDVA40QQOtUWAWh1UDccb/njLEAS+v7pgb1Xpuh5dVpp6k2xxIASz/UhyJ308QkxQkigmSBmMVyk6wWAE9/xJcHHRYaTR9uX2yFLRZLbN5n//EEPxXu13UpemZ3gWIiC8E9MR8s9YpA/3JkgPJIEbCWWaVe/9YdeiFymZvNrSP9t+M4wMYmXuUUbVjoSVn7NR8Uek2A/M1MNiQQwheefWNip6Me1k8oOFqyTHYG7VvQzaHeoZcCt/bgjOWeJcQ1FDThBAh3i14QBgtMQ5KjUdbtQ3gw3wkR1YtjqoCMKj32WBP3IKgSNHopxb815yM70/2jZoNkf8/2gcI4cGuiHq0FU81HBFK3Y5nXr3d/XVfGNmMgzvL7moDbFrjBb5oLnBOFiWADEnsdfVJkcCqKq86n2f8VrlTf38+B/DtlTKISzIRatp+O2qNYR0CVw+iqsXJmC7+PWmuisceBRTxgwRRfIxZxUuG9FMggPaiiT94WQjV/f6PJlr1P5UM/NUlixLknOJIhCsjsIROrC7oaxv2GrTByAGZGrd8A++w09P3E6z+sj2pgfeVEev9f/Qq9QqUMVD80L/a/TnUC2XF+/XozVaeUZ3qgAMczRIQCGqCcTWvuMm5VLjjkBo=

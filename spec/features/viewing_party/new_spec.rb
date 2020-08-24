@@ -10,7 +10,7 @@ RSpec.describe 'As an authenticated user' do
       VCR.use_cassette('first_of_top_forty_movies') do
         visit discover_path
         click_on "Find Top Rated Movies"
-        find('.movie-title', match: :first).click
+        find('.movie-title', match: :first)
         click_on "New Viewing Party"
         expect(current_path).to eq(viewing_parties_new_path)
       end

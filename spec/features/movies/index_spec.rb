@@ -19,6 +19,8 @@ RSpec.describe 'As an authenticated user' do
     within(".top40") do
       expect(page).to have_selector(".movie-title", count: 40)
     end
+
+    # test mock results for top 40 search
   end
 
   it 'When I click on a movie title link, I should be redirected to the movie\'s details page' do

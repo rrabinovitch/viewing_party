@@ -3,21 +3,22 @@ class SearchResults
     @service = MovieDBService.new
   end
 
-  def top_forty
+  def top_rated_movies
     page1 = @service.top_rated(1)
-    page2 = @service.top_rated(2)
-    movies = page1[:results] << page2[:results].shift until page2[:results].size.zero?
+    page = 2
+    until page1[:results].size >= 40
+      next_page = @service.top_rated(page)
+      page1[:results] << next_page[:results].shift until next_page[:results].empty?
+      page += 1
+    end
+    page1[:results]
+  end
+
+  def top_forty
+    movies = top_rated_movies.first(40)
     movies.map do |movie_data|
       get_movie(movie_data[:id])
     end
-
-    # until results.length >= 40
-    #   call #top_rated(page)
-    #   page += 1
-    #   ...
-    # end
-    #
-    # return results.first(40)
   end
 
   def keyword_results(keywords)
@@ -26,7 +27,7 @@ class SearchResults
     if page2[:results].empty?
       movies = page1[:results]
     else
-      movies = page1[:results] << page2[:results].shift until page2[:results].size.zero?
+      movies = page1[:results] << page2[:results].shift until page2[:results].empty?
     end
     movies.map do |movie_data|
       get_movie(movie_data[:id])
@@ -34,7 +35,7 @@ class SearchResults
   end
 
   def get_cast_members(movie_id)
-    @service.movie_cast(movie_id).map do |member_data|
+    @service.movie_cast(movie_id)[:cast].map do |member_data|
       CastMember.new(member_data)
     end
   end

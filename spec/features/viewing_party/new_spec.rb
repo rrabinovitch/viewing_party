@@ -11,7 +11,7 @@ RSpec.describe 'As an authenticated user' do
     it 'When I click the button to create a viewing party, I\'m redirected to a new viewing party form' do
       VCR.use_cassette('find_dickie_roberts_by_id') do
         visit viewing_parties_new_path({movie_id: 13778})
-        expect()
+        # expect()
 
       end
       # expect one movie's details here.

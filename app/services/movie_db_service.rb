@@ -1,4 +1,7 @@
 class MovieDBService
+  # build in an initializer w instance variables
+  # to DRY up req.params
+
   def top_rated(page_num)
     response = conn.get('/3/movie/top_rated') do |req|
       req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']

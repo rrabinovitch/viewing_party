@@ -1,4 +1,4 @@
-<%= button_to "New Viewing Party", "/viewing_parties/new", method: :get, params: {movie_id: @movie.id} %>
+<%= button_to "New Viewing Party", viewing_parties_new_path, method: :get, params: {movie_id: @movie.id} %>
 <!-- use path helper for new viewing party button: viewing_parties_new_path(@movie) -->
 
 <h3 class='movie-title'><%= @movie.title %></h3>
@@ -14,7 +14,7 @@
   <% end %>
 </ul>
 
-<p'>Cast (top 10):</p>
+<p>Cast (top 10):</p>
   <ul>
     <% @movie.first_ten_cast_members.each do |member| %>
       <li class='cast-member'><%= member.name %> -- as <%= member.character %></li>

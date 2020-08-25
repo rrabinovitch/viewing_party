@@ -1,8 +1,15 @@
 class MovieDBService
+  def initialize
+    @params = {
+      'api_key' => ENV['MOVIE_DB_API_KEY_V3'],
+      'language' => 'en-US'
+    }
+    @key_only = {'api_key' => ENV['MOVIE_DB_API_KEY_V3']}
+  end
+
   def top_rated(page_num)
     response = conn.get('/3/movie/top_rated') do |req|
-      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
-      req.params['language'] = 'en-US'
+      req.params.merge!(@params)
       req.params['page'] = page_num.to_s
     end
     parse(response)
@@ -10,8 +17,7 @@ class MovieDBService
 
   def keyword_search(page_num, keywords)
     response = conn.get('/3/search/movie') do |req|
-      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
-      req.params['language'] = 'en-US'
+      req.params.merge!(@params)
       req.params['query'] = keywords
       req.params['page'] = page_num.to_s
     end
@@ -20,23 +26,21 @@ class MovieDBService
 
   def movie_details(id)
     response = conn.get("/3/movie/#{id}") do |req|
-      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
-      req.params['language'] = 'en-US'
+      req.params.merge!(@params)
     end
     parse(response)
   end
 
   def movie_cast(id)
     response = conn.get("/3/movie/#{id}/credits") do |req|
-      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
+      req.params.merge!(@key_only)
     end
     parse(response)[:cast]
   end
 
   def movie_reviews(id)
     response = conn.get("/3/movie/#{id}/reviews") do |req|
-      req.params['api_key'] = ENV['MOVIE_DB_API_KEY_V3']
-      req.params['language'] = 'en-US'
+      req.params.merge!(@params)
     end
     parse(response)
   end

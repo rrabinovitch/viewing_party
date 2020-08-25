@@ -28,6 +28,8 @@ RSpec.describe 'As an authenticated user' do
         expect(page).to have_css(".movie-title")
         movie_title = find(".movie-title").text
         expect(movie_title).not_to be_empty
+        expect(movie_title.class).to eq(String)
+        # add these assertions for other movie attributes
 
         expect(page).to have_css(".vote-average")
         vote_avg = find(".vote-average").text

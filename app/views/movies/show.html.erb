@@ -1,25 +1,29 @@
 <%= button_to "New Viewing Party", "/viewing_parties/new?movie_id=#{@movie.id}", method: :get %>
 
-<h3><%= @movie.title %></h3>
-<p>Vote Average: <%= @movie.vote_avg %></p>
-<p>Runtime: <%= @movie.runtime %> minutes</p>
-<p>Summary: <%= @movie.summary %></p>
-<p>Genres:</p>
+<h3 class='movie-title'><%= @movie.title %></h3>
+
+<p class='vote-average'>Vote Average: <%= @movie.vote_avg %></p>
+<p class='runtime'>Runtime: <%= @movie.runtime %> minutes</p>
+<p class='summary'>Summary: <%= @movie.summary %></p>
+<p class='genres'>Genres:</p>
+
 <ul>
-<% @movie.genres.each do |genre| %>
-  <li><%= genre %></li>
-<% end %>
-</ul>
-<p>Cast (top 10):</p>
-<ul>
-<% @movie.first_ten_cast_members.each do |member| %>
-  <li><%= member.name %> -- as <%= member.character %></li>
-<% end %>
-</ul>
-<h4>Reviews(<%= @movie.reviews.size %>)</h4>
-<div class="movie-review">
-  <% @movie.reviews.each do |review| %>
-    <em>By: <%= review.author %></em>
-    <p><%= review.content %></p>
+  <% @movie.genres.each do |genre| %>
+    <li><%= genre %></li>
   <% end %>
-</div>
+</ul>
+
+<p'>Cast (top 10):</p>
+  <ul>
+    <% @movie.first_ten_cast_members.each do |member| %>
+      <li class='cast-member'><%= member.name %> -- as <%= member.character %></li>
+    <% end %>
+  </ul>
+
+<h4>Reviews(<%= @movie.reviews.size %>)</h4>
+  <% @movie.reviews.each do |review| %>
+    <div class='movie-review'>
+      <em class='review-author'>By: <%= review.author %></em>
+      <p class='review-content'><%= review.content %></p>
+    </div>
+  <% end %>

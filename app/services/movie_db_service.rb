@@ -35,7 +35,7 @@ class MovieDBService
     response = conn.get("/3/movie/#{id}/credits") do |req|
       req.params.merge!(@key_only)
     end
-    parse(response)[:cast]
+    parse(response)
   end
 
   def movie_reviews(id)

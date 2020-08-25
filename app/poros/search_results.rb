@@ -26,7 +26,7 @@ class SearchResults
   end
 
   def get_cast_members(movie_id)
-    @service.movie_cast(movie_id).map do |member_data|
+    @service.movie_cast(movie_id)[:cast].map do |member_data|
       CastMember.new(member_data)
     end
   end

@@ -1,4 +1,5 @@
 <%= button_to "New Viewing Party", "/viewing_parties/new?movie_id=#{@movie.id}", method: :get %>
+<!-- use path helper for new viewing party button: viewing_parties_new_path(@movie) -->
 
 <h3 class='movie-title'><%= @movie.title %></h3>
 

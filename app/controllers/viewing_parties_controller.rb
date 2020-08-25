@@ -1,3 +1,7 @@
 class ViewingPartiesController < ApplicationController
-  def new; end
+  def new
+    @movie = SearchResults.new.get_movie(params[:movie_id])
+
+    binding.pry
+  end
 end

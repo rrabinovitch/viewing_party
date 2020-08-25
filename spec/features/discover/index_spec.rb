@@ -6,6 +6,7 @@ RSpec.describe 'As an authenticated user' do
   end
 
   it 'I should see a button to discover top-rated movies; when I click on it, I\'m taken to the Movies page' do
+
     VCR.use_cassette('top_forty_movies') do
       visit discover_path
       click_on "Find Top Rated Movies"
@@ -18,5 +19,15 @@ RSpec.describe 'As an authenticated user' do
     visit discover_path
     expect(page).to have_selector("#movie_keywords")
     expect(page).to have_button("Find Movies")
+  end
+
+  it 'When I submit a movie keyword search, I am taken to the movies page' do
+
+    VCR.use_cassette('dickie_roberts_search_results') do
+      visit discover_path
+      fill_in :movie_keywords, with: "Dickie Roberts"
+      click_on "Find Movies"
+      expect(current_path).to eq(movies_path)
+    end
   end
 end

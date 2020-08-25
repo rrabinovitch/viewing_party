@@ -2,10 +2,12 @@ class MoviesController < ApplicationController
   before_action :require_login
 
   def index
-    # if query params include keywords, perform that search,
-    # else, show top40 results (those are the two routes to
-    # get to this index action)
-    @movies = SearchResults.new.top_forty
+    keywords = params[:movie_keywords]
+    if keywords.nil?
+      @movies = SearchResults.new.top_forty
+    else
+      @movies = SearchResults.new.keyword_results(keywords)
+    end
   end
 
   def show

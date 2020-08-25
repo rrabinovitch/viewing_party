@@ -15,6 +15,9 @@ RSpec.describe 'As an authenticated user' do
         expect(current_path).to eq(viewing_parties_new_path)
       end
       # expect one movie's details here.
+      # specify classes in show page and check that css is there (ie not empty)
+      # district = find(".district").text
+      # expect(district).not_to be_empty
     end
   end
 end

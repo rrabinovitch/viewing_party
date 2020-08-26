@@ -20,5 +20,12 @@
 
 <section class="viewing-parties">
   <h2>Viewing Parties</h2>
-  <p>You have no viewing parties coming up.</p>
+  <% if current_user.parties %>
+    <% current_user.parties.each do |party| %>
+      <h4><%= party.movie %></h4>
+      <p><%= party.date %></p>
+    <% end %>
+  <% else %>
+    <p>You have no viewing parties coming up.</p>
+  <% end %>
 </section>

@@ -15,7 +15,7 @@ RSpec.describe 'As an authenticated user' do
 
         visit viewing_parties_new_path({movie_id: 13778})
 
-        # expect(page).to have_css("#movie-title") ## not being found for some reason: come back to this later
+        expect(page).to have_css(".movie-title")
         expect(page).to have_selector("#duration")
         expect(page).to have_selector("#date")
         expect(page).to have_selector("#friend_ids")
@@ -31,7 +31,7 @@ RSpec.describe 'As an authenticated user' do
       VCR.use_cassette('find_dickie_roberts_by_id') do
         visit viewing_parties_new_path({movie_id: 13778})
 
-        # expect(page).to have_css("#movie-title") ## not being found for some reason: come back to this later
+        expect(page).to have_css(".movie-title")
         expect(page).to have_selector("#duration")
         expect(page).to have_selector("#date")
         expect(page).to_not have_selector("#friend_ids")
@@ -51,7 +51,7 @@ RSpec.describe 'As an authenticated user' do
         @current_user.friends << friend2
 
         visit viewing_parties_new_path({movie_id: 13778})
-
+        
         fill_in :duration, with: 200
         # page.check(friend1.username)
 

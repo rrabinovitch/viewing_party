@@ -16,7 +16,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
 gem 'omniauth-google-oauth2'
-
 gem 'json'
 
 
@@ -24,6 +23,7 @@ group :development, :test do
   gem 'pry'
   gem 'travis'
   gem 'figaro'
+  gem 'table_print'
 end
 
 group :development do

@@ -20,11 +20,11 @@
 
 <section class="viewing-parties">
   <h2>Viewing Parties</h2>
-  <% if current_user.parties %>
+  <% unless current_user.parties.empty? %>
     <% current_user.parties.each do |party| %>
       <h4><%= party.movie %></h4>
       <p>Date: <%= party.date %></p>
-      <p>Time: </p>
+      <p>Time: <%= #fill in party time %></p>
     <% end %>
   <% else %>
     <p>You have no viewing parties coming up.</p>

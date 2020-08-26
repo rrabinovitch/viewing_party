@@ -4,6 +4,6 @@ class Party < ApplicationRecord
   has_many :attendees, through: :user_parties
 
   def movie
-    get_movie(self.movie_id)
+    SearchResults.new.get_movie(self.movie_id).title
   end
 end

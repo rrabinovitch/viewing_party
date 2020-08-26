@@ -4,7 +4,6 @@ class ViewingPartiesController < ApplicationController
   end
 
   def create
-    # for some reason, new party and new UserParty aren't being saved.
     party = current_user.parties.create(party_params)
     params[:users][:id].each do |user_id|
       UserParty.create(party_id: party.id, attendee_id: user_id, host_id: current_user.id)

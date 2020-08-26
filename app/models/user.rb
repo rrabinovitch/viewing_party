@@ -2,6 +2,10 @@ class User < ApplicationRecord
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
 
+  has_many :parties, dependent: :destroy
+  has_many :attendees, through: :user_parties 
+
+
   def self.from_omniauth(auth)
     user = User.find_by(user_id: auth[:uid]) || User.new
     user.attributes = {

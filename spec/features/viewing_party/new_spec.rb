@@ -18,7 +18,7 @@ RSpec.describe 'As an authenticated user' do
         expect(page).to have_css(".movie-title")
         expect(page).to have_selector("#duration")
         expect(page).to have_selector("#date")
-        expect(page).to have_selector("#friend_ids")
+        expect(page).to have_css(".friends")
         expect(page).to have_content(friend1.username)
         expect(page).to have_content(friend2.username)
 
@@ -51,7 +51,7 @@ RSpec.describe 'As an authenticated user' do
         @current_user.friends << friend2
 
         visit viewing_parties_new_path({movie_id: 13778})
-        
+
         fill_in :duration, with: 200
         # page.check(friend1.username)
 

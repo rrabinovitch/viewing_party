@@ -37,11 +37,12 @@ ActiveRecord::Schema.define(version: 2020_08_26_031120) do
 
   create_table "user_parties", force: :cascade do |t|
     t.bigint "party_id"
+    t.bigint "host_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "attendee_id"
-    t.bigint "host_id"
     t.index ["attendee_id"], name: "index_user_parties_on_attendee_id"
+    t.index ["host_id"], name: "index_user_parties_on_host_id"
     t.index ["party_id"], name: "index_user_parties_on_party_id"
   end
 

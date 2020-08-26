@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
 
   def parties
-    user_parties = UserParty.where(attendee_id: self.id)
+    user_parties = UserParty.where(attendee_id: id)
     user_parties.map do |user_party|
       Party.find(user_party.party_id)
     end

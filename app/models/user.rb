@@ -2,8 +2,9 @@ class User < ApplicationRecord
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
 
-  has_many :parties, dependent: :destroy
-  has_many :attendees, through: :user_parties 
+  has_many :parties
+  has_many :user_parties
+  has_many :attendees, through: :user_parties
 
 
   def self.from_omniauth(auth)

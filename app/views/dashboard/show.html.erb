@@ -20,7 +20,7 @@
 
 <section class="viewing-parties">
   <h2>Viewing Parties</h2>
-  <% if current_user.parties %>
+  <% unless current_user.parties.empty? %>
     <% current_user.parties.each do |party| %>
       <h4><%= party.movie %></h4>
       <p><%= party.date %></p>

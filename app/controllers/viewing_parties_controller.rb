@@ -6,7 +6,6 @@ class ViewingPartiesController < ApplicationController
   def create
     # instead, create party separately (without user id)
     # then create the join table entires with current_user, host: true
-    require "pry"; binding.pry
     party = Party.create(party_params)
     params[:users][:id].each do |user_id|
       UserParty.create(party_id: party.id, attendee_id: user_id)

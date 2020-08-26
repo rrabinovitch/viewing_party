@@ -4,7 +4,7 @@ class MovieDBService
       'api_key' => ENV['MOVIE_DB_API_KEY_V3'],
       'language' => 'en-US'
     }
-    @key_only = {'api_key' => ENV['MOVIE_DB_API_KEY_V3']}
+    @key_only = { 'api_key' => ENV['MOVIE_DB_API_KEY_V3'] }
   end
 
   def top_rated(page_num)

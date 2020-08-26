@@ -3,11 +3,8 @@ class MoviesController < ApplicationController
 
   def index
     keywords = params[:movie_keywords]
-    if keywords.nil?
-      @movies = SearchResults.new.top_forty
-    else
-      @movies = SearchResults.new.keyword_results(keywords)
-    end
+    sr = SearchResults.new
+    @movies = keywords.nil? ? sr.top_forty : sr.keyword_results(keywords)
   end
 
   def show

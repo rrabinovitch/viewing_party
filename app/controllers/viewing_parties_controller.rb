@@ -4,6 +4,7 @@ class ViewingPartiesController < ApplicationController
   end
 
   def create
+    binding.pry
     party = current_user.parties.create(party_params)
     params[:users][:id].each do |user_id|
       UserParty.create(party_id: party.id, attendee_id: user_id, host_id: current_user.id)

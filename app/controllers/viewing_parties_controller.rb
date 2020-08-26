@@ -1,3 +1,6 @@
+require 'google/api_client/client_secrets.rb'
+require 'google/apis/calendar_v3'
+
 class ViewingPartiesController < ApplicationController
   def new
     @movie = SearchResults.new.get_movie(params[:movie_id])
@@ -19,5 +22,15 @@ class ViewingPartiesController < ApplicationController
 
   def party_params
     params.permit(:movie_id, :duration, :date)
+  end
+
+  def google_secret
+    Google::APIClient::ClientSecrets.new(
+      { 'web' =>
+        { 'access_token' => @user.google_token,
+          'refresh_token' => @user.google_refresh_token,
+          'client_id' => Rails.application.secrets.google_client_id,
+          'client_secret' => Rails.application.secrets.google_client_secret } }
+    )
   end
 end

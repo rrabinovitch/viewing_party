@@ -4,6 +4,5 @@ class ViewingPartiesController < ApplicationController
   end
 
   def create
-    
   end
 end

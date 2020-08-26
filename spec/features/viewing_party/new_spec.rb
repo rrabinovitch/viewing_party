@@ -51,7 +51,7 @@ RSpec.describe 'As an authenticated user' do
         @current_user.friends << friend2
 
         visit viewing_parties_new_path({movie_id: 13778})
-        save_and_open_page
+        
         fill_in :duration, with: 200
         # page.check(friend1.username)
 

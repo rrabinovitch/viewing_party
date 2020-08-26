@@ -1,6 +1,6 @@
 RSpec.describe 'As an authenticated user' do
   before :each do
-    user = User.new(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
+    user = User.create(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
   end

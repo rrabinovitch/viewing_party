@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 25 Aug 2020 20:37:55 GMT
+      - Tue, 25 Aug 2020 19:10:29 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,25 +42,25 @@ http_interactions:
       X-Memc-Key:
       - 0c3239fffa5f2643b8b9b013d597efd0
       X-Memc-Age:
-      - '13448'
+      - '8202'
       X-Memc-Expires:
-      - '8152'
+      - '13398'
       Etag:
       - W/"3ace03eb93dc981f78e95e13cb497bf3"
       Last-Modified:
-      - Tue, 25 Aug 2020 20:37:55 GMT
+      - Tue, 25 Aug 2020 19:10:29 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 e958ccb7b8e6da460b4e702ae2ff8aef.cloudfront.net (CloudFront)
+      - 1.1 6d9f09528e589f3fa7ca05f965ea37a2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ATL50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
-      - HwsvmvLFVEExnR5yuGSysRMlh8k5J_F16CRvmj1DrtVUf8xN5jDlsg==
+      - 7NKHRV4oNHg3uVmo-DV9I810vMy811TM7-SZ5Cjf-FGRIs0vHcpaSg==
       Age:
-      - '2809'
+      - '11435'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":35,"name":"Comedy"}],"homepage":"","id":13778,"imdb_id":"tt0325258","original_language":"en","original_title":"Dickie
@@ -73,5 +73,5 @@ http_interactions:
         States of America"}],"release_date":"2003-09-05","revenue":0,"runtime":98,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"50
         million people used to watch him on TV. Now he washes their cars.","title":"Dickie
         Roberts: Former Child Star","video":false,"vote_average":5.1,"vote_count":129}'
-  recorded_at: Tue, 25 Aug 2020 21:24:44 GMT
+  recorded_at: Tue, 25 Aug 2020 22:21:04 GMT
 recorded_with: VCR 6.0.0

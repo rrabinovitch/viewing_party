@@ -4,7 +4,7 @@ RSpec.describe 'dashboard show page' do
       user = User.create!(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
 
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
-      visit "/dashboard"
+      visit dashboard_path
     end
 
     it "the dashboard has a 'Discover Movies' button that redirects me to a discover page" do

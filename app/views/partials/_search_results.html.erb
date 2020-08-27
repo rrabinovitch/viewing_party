@@ -1,5 +1,5 @@
 <% @movies.each do |movie| %>
   <div class="movie">
-    <h4><%= link_to movie.title, "/movies/detail?id=#{movie.id}", class: "movie-title" %> / <%= movie.vote_avg %></h4>
+    <h4><%= link_to movie.title, movies_detail_path(movie), class: "movie-title" %> / <%= movie.vote_avg %></h4>
   </div>
 <% end %>

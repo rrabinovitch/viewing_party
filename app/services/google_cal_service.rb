@@ -22,13 +22,11 @@ class GoogleCalService
 
   def google_secret(current_user)
     Google::APIClient::ClientSecrets.new(
-      { "web" =>
-        { "access_token" => current_user.token,
-          "refresh_token" => current_user.refresh_token,
-          "client_id" => ENV['GOOGLE_CLIENT_ID'],
-          "client_secret" => ENV['GOOGLE_CLIENT_SECRET']
-        }
-      }
+      { 'web' =>
+        { 'access_token' => current_user.token,
+          'refresh_token' => current_user.refresh_token,
+          'client_id' => ENV['GOOGLE_CLIENT_ID'],
+          'client_secret' => ENV['GOOGLE_CLIENT_SECRET'] } }
     )
   end
 end

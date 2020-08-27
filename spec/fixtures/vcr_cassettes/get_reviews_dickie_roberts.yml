@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/13778/reviews?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '68'
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - d15feaf6acacab017db71d6ce6c3b8d6
+      X-Memc-Age:
+      - '2507'
+      X-Memc-Expires:
+      - '19093'
+      Etag:
+      - W/"ba5343698a46a0a58aea76585c37cb53"
+      Last-Modified:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 cc3282f0c721d56a39bd8ba3aa575b67.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ATL50-C1
+      X-Amz-Cf-Id:
+      - QBTXZ4LfYEYePHg0G1fa4RQdqLNw1-rSsyuIoDD2nvoneSV11cOfBA==
+      Age:
+      - '3547'
+    body:
+      encoding: UTF-8
+      string: '{"id":13778,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Thu, 27 Aug 2020 03:02:52 GMT
+recorded_with: VCR 6.0.0

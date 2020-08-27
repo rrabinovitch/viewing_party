@@ -46,6 +46,7 @@ http_interactions:
       X-Amz-Cf-Pop:
       - DEN50-C2
       X-Amz-Cf-Id:
+
       - PYYQ18ypHWfHuB57Ze1Hc76URjWDLMmt1oHktZNe-7z_TRxB7LWJ1Q==
     body:
       encoding: ASCII-8BIT
@@ -93,12 +94,14 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
+      Date:
+      - Thu, 27 Aug 2020 01:43:32 GMT
       Etag:
       - 2bb8cfc3a3e9bf88239773a4c0bdedfc
       Cache-Control:
       - public, max-age=120
       X-Cache:
-      - Miss from cloudfront
+      - RefreshHit from cloudfront
       Via:
       - 1.1 dc50b0effd72a7b2c19bcb0909cfae82.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
@@ -133,6 +136,8 @@ http_interactions:
       - chunked
       Connection:
       - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 00:16:37 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -147,6 +152,7 @@ http_interactions:
       X-Memc-Key:
       - 0c3239fffa5f2643b8b9b013d597efd0
       X-Memc-Age:
+
       - '13361'
       X-Memc-Expires:
       - '8239'
@@ -168,6 +174,8 @@ http_interactions:
       - DEN50-C2
       X-Amz-Cf-Id:
       - OqKW7P4hlpfAjJdyCv3m2mgsuZHXBmrZ3aNGtzZKZ_nQvqBlkCSvQw==
+      Age:
+      - '5215'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":35,"name":"Comedy"}],"homepage":"","id":13778,"imdb_id":"tt0325258","original_language":"en","original_title":"Dickie

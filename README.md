@@ -1,5 +1,7 @@
 # Viewing Party
 
+## [Heroku site](https://calm-chamber-19158.herokuapp.com/)
+
 ### About this Project
 
 Viewing party is an application in which users can explore movie options and create a viewing party event for the user and their friends. Users access the site via Google OAuth, which also allows them to add viewing party events to their Google Calendar. Users may add friends to their account by searching GMail account names that are associated with other existing application accounts. [TMDB API](https://www.themoviedb.org/) is used to access movie info via a "40 Top Rated" search and a keyword search.
@@ -17,9 +19,8 @@ The main learnings from this project came from learning, managing, and integrati
 3. Obtain Google OAuth credentials and set up Google Calendar API scope (you may reference [this Medium article](https://medium.com/@amoschoo/google-oauth-for-ruby-on-rails-129ce7196f35) and the [OmniAuth documentation](https://github.com/heartcombo/devise/wiki/OmniAuth:-Overview) for set up support)
 4. Install gem packages: `bundle install`
 5. Setup the database: `rails db:create`
-6. Run your local server: `rails s` and visit http://localhost:300
+6. Run your local server: `rails s` and visit http://localhost:3000
 7. Run test suite: `bundle exec rspec`
-
 
 ### Languages, Frameworks, and Technologies
 
@@ -31,4 +32,5 @@ The main learnings from this project came from learning, managing, and integrati
 - Heroku
 
 ### ERD
+This diagram depicts the relationships between resources in the application database.
 ![ERD](https://user-images.githubusercontent.com/62635544/91383174-ba2a8880-e7e8-11ea-83ba-e056218b16a2.png)

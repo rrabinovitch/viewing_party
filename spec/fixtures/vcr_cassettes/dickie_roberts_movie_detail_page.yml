@@ -1,0 +1,414 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/13778?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 00:16:37 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 0c3239fffa5f2643b8b9b013d597efd0
+      X-Memc-Age:
+      - '16348'
+      X-Memc-Expires:
+      - '5252'
+      Etag:
+      - W/"07ec01a62bb10dffeea2e6ade351f657"
+      Last-Modified:
+      - Thu, 27 Aug 2020 00:16:37 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 e958ccb7b8e6da460b4e702ae2ff8aef.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ATL50-C1
+      X-Amz-Cf-Id:
+      - xqB2-MEtKzRrVpYNg0qkczLeN7BBcsIfNJSCnCFo0AiHt71X_HR5bg==
+      Age:
+      - '6428'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"adult":false,"backdrop_path":"/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":35,"name":"Comedy"}],"homepage":"","id":13778,"imdb_id":"tt0325258","original_language":"en","original_title":"Dickie
+        Roberts: Former Child Star","overview":"TV child star of the ''70s, Dickie
+        Roberts is now 35 and parking cars. Craving to regain the spotlight, he auditions
+        for a role of a normal guy, but the director quickly sees he is anything but
+        normal. Desperate to win the part, Dickie hires a family to help him replay
+        his childhood and assume the identity of an average, everyday kid.","popularity":9.659,"poster_path":"/6dgCPSVEEMU2BLvxOzBAvkQjIeL.jpg","production_companies":[{"id":2608,"logo_path":"/g3YRudXiQzHesQqRXvnhFpMzfkU.png","name":"Happy
+        Madison Productions","origin_country":"US"},{"id":4,"logo_path":"/fycMZt242LVjagMByZOLUGbCvv3.png","name":"Paramount","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
+        States of America"}],"release_date":"2003-09-05","revenue":0,"runtime":98,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"50
+        million people used to watch him on TV. Now he washes their cars.","title":"Dickie
+        Roberts: Former Child Star","video":false,"vote_average":5.1,"vote_count":130}'
+  recorded_at: Thu, 27 Aug 2020 02:03:45 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/13778/credits?api_key=<MOVIE_DB_API_KEY_V3>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - 9a642f48fb73b50dd878fad567795985
+      X-Memc-Age:
+      - '15067'
+      X-Memc-Expires:
+      - '6533'
+      Etag:
+      - W/"cc8194b7b5bd5b9c4050b762ce23fc8d"
+      Last-Modified:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 296b717727b6ec130dd68764b732c2d2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ATL50-C1
+      X-Amz-Cf-Id:
+      - 7MZsTyVn4OGj9jAcNqz-zDv9dlFkOKxrUSC4uWbn-ui9mYPtvDMPFA==
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":13778,"cast":[{"cast_id":1,"character":"Dickie Roberts","credit_id":"52fe459b9251416c7505c597","gender":2,"id":60950,"name":"David
+        Spade","order":0,"profile_path":"/8tv638lAMLmYh8bSLICqPzbW3tv.jpg"},{"cast_id":2,"character":"Grace
+        Finney","credit_id":"52fe459b9251416c7505c59b","gender":1,"id":1980,"name":"Mary
+        McCormack","order":1,"profile_path":"/e2brLtFCfgLdOp356bcEyRzQkoJ.jpg"},{"cast_id":3,"character":"George
+        Finney","credit_id":"52fe459b9251416c7505c59f","gender":2,"id":14886,"name":"Craig
+        Bierko","order":2,"profile_path":"/btsSJRxc0i7Xty1R0iCYOnbTuDE.jpg"},{"cast_id":4,"character":"Sam
+        Finney","credit_id":"52fe459b9251416c7505c5a3","gender":2,"id":56153,"name":"Scott
+        Terra","order":3,"profile_path":null},{"cast_id":5,"character":"Sally Finney","credit_id":"52fe459b9251416c7505c5a7","gender":1,"id":59176,"name":"Jenna
+        Boyd","order":4,"profile_path":"/tDMgyuY9KwFHpmJdqyi51aGOkCe.jpg"},{"cast_id":6,"character":"Referee","credit_id":"52fe459b9251416c7505c5ab","gender":2,"id":5621,"name":"John
+        Farley","order":5,"profile_path":"/iWDL5mvrsgSnsvrclFA01ka8btB.jpg"},{"cast_id":7,"character":"Commentator","credit_id":"52fe459b9251416c7505c5af","gender":2,"id":53601,"name":"Bobby
+        Slayton","order":6,"profile_path":null},{"cast_id":8,"character":"Himself","credit_id":"52fe459b9251416c7505c5b3","gender":2,"id":66072,"name":"Michael
+        Buffer","order":7,"profile_path":null},{"cast_id":9,"character":"Dickie''s
+        Corner Man","credit_id":"52fe459b9251416c7505c5b7","gender":2,"id":66563,"name":"Fred
+        Wolf","order":8,"profile_path":"/64Klcur18Q3eTZ4tTPiOnWrufU5.jpg"},{"cast_id":10,"character":"Cyndi","credit_id":"52fe459b9251416c7505c5bb","gender":1,"id":24967,"name":"Alyssa
+        Milano","order":9,"profile_path":"/q5RAaX57dLvlpigAhbX3lCb2dkZ.jpg"},{"cast_id":11,"character":"Himself","credit_id":"52fe459b9251416c7505c5bf","gender":2,"id":75308,"name":"Emmanuel
+        Lewis","order":10,"profile_path":null},{"cast_id":12,"character":"Emmanuel''s
+        Entourage","credit_id":"52fe459b9251416c7505c5c3","gender":2,"id":75309,"name":"Joey
+        Diaz","order":11,"profile_path":"/pLWM7fQoqbbNui1vf7PKE0jdlm2.jpg"},{"cast_id":13,"character":"Emmanuel''s
+        Entourage","credit_id":"52fe459b9251416c7505c5c7","gender":2,"id":3952,"name":"Kevin
+        Grevioux","order":12,"profile_path":null},{"cast_id":14,"character":"Guy in
+        Car","credit_id":"52fe459b9251416c7505c5cb","gender":0,"id":75310,"name":"Brian
+        Clark","order":13,"profile_path":null},{"cast_id":15,"character":"Himself","credit_id":"52fe459b9251416c7505c5cf","gender":2,"id":2883,"name":"Leif
+        Garrett","order":14,"profile_path":"/ulWrIA7p0LvTqdNDrGoEUV8Wnsw.jpg"},{"cast_id":16,"character":"Girl","credit_id":"52fe459b9251416c7505c5d3","gender":0,"id":75311,"name":"Emily
+        Harrison","order":15,"profile_path":null},{"cast_id":17,"character":"Girl","credit_id":"52fe459b9251416c7505c5d7","gender":1,"id":70557,"name":"Nancy
+        Pimental","order":16,"profile_path":null},{"cast_id":18,"character":"Mr. Rollins","credit_id":"52fe459b9251416c7505c5db","gender":2,"id":22053,"name":"Alan
+        Blumenfeld","order":17,"profile_path":"/lee2RTmaaX7ik9ClXLf3ReZEoJS.jpg"},{"cast_id":19,"character":"Sidney
+        Wernick","credit_id":"52fe459b9251416c7505c5df","gender":2,"id":16165,"name":"Jon
+        Lovitz","order":18,"profile_path":"/jBXSLoDEVwYkNqSVWHV9yDo8whA.jpg"},{"cast_id":20,"character":"Angry
+        Driver","credit_id":"52fe459b9251416c7505c5e3","gender":2,"id":75312,"name":"Sasha
+        Mitchell","order":19,"profile_path":"/aQY4UL2amuqigxoILTd4MdtXDpW.jpg"},{"cast_id":21,"character":"Alcoholic
+        Speaker","credit_id":"52fe459b9251416c7505c5e7","gender":0,"id":65913,"name":"M.
+        Blair Breard","order":20,"profile_path":null},{"cast_id":22,"character":"Himself","credit_id":"52fe459b9251416c7505c5eb","gender":2,"id":74036,"name":"Tom
+        Arnold","order":21,"profile_path":"/z2ajL1ozVCS4Ug04zOGCNH06OPP.jpg"},{"cast_id":23,"character":"Counselor","credit_id":"52fe459b9251416c7505c5ef","gender":0,"id":75313,"name":"Kathleen
+        Randazzo","order":22,"profile_path":null},{"cast_id":24,"character":"Lamaze
+        Group Leader","credit_id":"52fe459c9251416c7505c5f3","gender":1,"id":75314,"name":"Peggy
+        Mannix","order":23,"profile_path":null},{"cast_id":25,"character":"Himself","credit_id":"52fe459c9251416c7505c5f7","gender":2,"id":3034,"name":"Corey
+        Feldman","order":24,"profile_path":"/zXQXO7RepbajuzbCHyDuqj2B6FR.jpg"},{"cast_id":26,"character":"Himself","credit_id":"52fe459c9251416c7505c5fb","gender":2,"id":75315,"name":"Danny
+        Bonaduce","order":25,"profile_path":"/A3TlkIbCKpYo4PF2BUEwVT0k63o.jpg"},{"cast_id":27,"character":"Himself","credit_id":"52fe459c9251416c7505c5ff","gender":2,"id":19186,"name":"Dustin
+        Diamond","order":26,"profile_path":"/pscx8aqFSeWqFo6F7QDLsnAelqv.jpg"},{"cast_id":28,"character":"Reiner''s
+        Secretary","credit_id":"52fe459c9251416c7505c603","gender":1,"id":32905,"name":"Rachel
+        Dratch","order":27,"profile_path":"/5I1P5oQ3WyV4eIM8E89zO1xVYuM.jpg"},{"cast_id":29,"character":"Himself","credit_id":"52fe459c9251416c7505c607","gender":2,"id":3026,"name":"Rob
+        Reiner","order":28,"profile_path":"/axu2DtYr0W0QUcQUqylzYgIU7hB.jpg"},{"cast_id":30,"character":"Publisher","credit_id":"52fe459c9251416c7505c60b","gender":2,"id":49275,"name":"Spencer
+        Garrett","order":29,"profile_path":"/jJWISea4PvC9Mv5kWONAMKhEK7j.jpg"},{"cast_id":31,"character":"Publisher","credit_id":"52fe459c9251416c7505c60f","gender":0,"id":75316,"name":"Hal
+        Sparks","order":30,"profile_path":"/sxmESxUf1nFEwheqXAtYDUMJP2s.jpg"},{"cast_id":32,"character":"Biker","credit_id":"52fe459c9251416c7505c613","gender":2,"id":75317,"name":"Rob
+        Elk","order":31,"profile_path":"/AvMPDpLNq75jsNiyOfanT8mmnMr.jpg"},{"cast_id":33,"character":"Sad
+        Eye Sadie","credit_id":"52fe459c9251416c7505c617","gender":1,"id":75318,"name":"Retta","order":32,"profile_path":"/bIo8tjdn48wIPEdcJ0UCqqTzClV.jpg"},{"cast_id":34,"character":"Strange
+        Man","credit_id":"52fe459c9251416c7505c61b","gender":2,"id":34457,"name":"Ian
+        Gomez","order":33,"profile_path":"/loKQwPBeONgPzRRvTP5aKjTlT5b.jpg"},{"cast_id":35,"character":"Peggy
+        Roberts","credit_id":"52fe459c9251416c7505c61f","gender":1,"id":45863,"name":"Doris
+        Roberts","order":34,"profile_path":"/4I5ahM7d12LfIvETzANvXAstp1Z.jpg"},{"cast_id":36,"character":"Himself","credit_id":"52fe459c9251416c7505c623","gender":2,"id":14671,"name":"Dick
+        Van Patten","order":35,"profile_path":"/cUMuVdm86djzJ1PYvJbR1oPUSfi.jpg"},{"cast_id":37,"character":"Young
+        Dickie","credit_id":"52fe459c9251416c7505c627","gender":0,"id":75319,"name":"Nicholas
+        Schwerin","order":36,"profile_path":null},{"cast_id":38,"character":"Ring
+        Girl","credit_id":"52fe459c9251416c7505c62b","gender":0,"id":75320,"name":"Michelle
+        Ruben","order":37,"profile_path":null},{"cast_id":39,"character":"Mrs. Gertrude","credit_id":"52fe459c9251416c7505c62f","gender":1,"id":3202,"name":"Edie
+        McClurg","order":38,"profile_path":"/vU5y4hZe1WhqDAPP5jEfrWv4Iaq.jpg"},{"cast_id":40,"character":"Passing
+        Man with Camera","credit_id":"52fe459c9251416c7505c633","gender":0,"id":60163,"name":"John
+        Kirk","order":39,"profile_path":null},{"cast_id":41,"character":"Map Seller","credit_id":"52fe459c9251416c7505c637","gender":0,"id":75321,"name":"Alexander
+        D. Slanger","order":40,"profile_path":null},{"cast_id":42,"character":"Bully","credit_id":"52fe459c9251416c7505c63b","gender":0,"id":75322,"name":"Oliver
+        Kindred","order":41,"profile_path":null},{"cast_id":43,"character":"Bully","credit_id":"52fe459c9251416c7505c63f","gender":2,"id":75323,"name":"Brandon
+        de Paul","order":42,"profile_path":null},{"cast_id":44,"character":"Bully","credit_id":"52fe459c9251416c7505c643","gender":2,"id":75324,"name":"Evan
+        Lee Dahl","order":43,"profile_path":null},{"cast_id":45,"character":"Boy in
+        Crowd","credit_id":"52fe459c9251416c7505c647","gender":2,"id":55090,"name":"Wyatt
+        Smith","order":44,"profile_path":"/q3hvJRLiUCiY8vpvPxPoMxSNB67.jpg"},{"cast_id":46,"character":"Mr.
+        Gertrude","credit_id":"52fe459c9251416c7505c64b","gender":2,"id":75325,"name":"Patrick
+        Thomas O''Brien","order":45,"profile_path":null},{"cast_id":47,"character":"Gertrude
+        Kid","credit_id":"52fe459c9251416c7505c64f","gender":0,"id":75326,"name":"Colin
+        Ryan","order":46,"profile_path":null},{"cast_id":48,"character":"Boy","credit_id":"52fe459c9251416c7505c653","gender":2,"id":75327,"name":"Christopher
+        Johnson","order":47,"profile_path":null},{"cast_id":49,"character":"Boy","credit_id":"52fe459c9251416c7505c657","gender":0,"id":75328,"name":"Sergei
+        Virovlianski","order":48,"profile_path":null},{"cast_id":50,"character":"Boy","credit_id":"52fe459c9251416c7505c65b","gender":0,"id":75329,"name":"Jake
+        Chapman","order":49,"profile_path":null},{"cast_id":51,"character":"Barbie","credit_id":"52fe459c9251416c7505c65f","gender":1,"id":75330,"name":"Ambyr
+        Childers","order":50,"profile_path":"/boFipGlGLBVQ9xTW69wXzWW6OAD.jpg"},{"cast_id":52,"character":"Teacher
+        at Microphone","credit_id":"52fe459c9251416c7505c663","gender":1,"id":26483,"name":"Valerie
+        Perrine","order":51,"profile_path":"/dOCVB0kK79ndxIp1ybdArlgka4j.jpg"},{"cast_id":53,"character":"Heather
+        Bolan","credit_id":"52fe459c9251416c7505c667","gender":1,"id":75331,"name":"Ashley
+        Edner","order":52,"profile_path":"/3UIMtG6XoSXpos8DEk2nk8Q3nKd.jpg"},{"cast_id":55,"character":"Valet","credit_id":"52fe459c9251416c7505c66f","gender":2,"id":5620,"name":"Kevin
+        Farley","order":54,"profile_path":"/jpXmfRfd3fzvyC0bBqEbw8R2Meu.jpg"},{"cast_id":56,"character":"Valet","credit_id":"52fe459c9251416c7505c673","gender":0,"id":75332,"name":"Miko
+        C. Brando","order":55,"profile_path":null},{"cast_id":57,"character":"News
+        Correspondent","credit_id":"52fe459c9251416c7505c677","gender":0,"id":75333,"name":"Mindy
+        Burbano","order":56,"profile_path":null},{"cast_id":58,"character":"Herself","credit_id":"52fe459c9251416c7505c67b","gender":1,"id":75334,"name":"Jann
+        Carl","order":57,"profile_path":null},{"cast_id":59,"character":"Reporter","credit_id":"52fe459c9251416c7505c67f","gender":0,"id":75335,"name":"Lindsey
+        Dann","order":58,"profile_path":null},{"cast_id":60,"character":"Herself","credit_id":"52fe459c9251416c7505c683","gender":1,"id":75336,"name":"Lisa
+        Joyner","order":59,"profile_path":null},{"cast_id":61,"character":"Brittany","credit_id":"52fe459c9251416c7505c687","gender":1,"id":75337,"name":"Erin
+        Murphy","order":60,"profile_path":null},{"cast_id":62,"character":"Janice","credit_id":"52fe459c9251416c7505c68b","gender":0,"id":75338,"name":"Meghan
+        Faye Gallagher","order":61,"profile_path":null},{"cast_id":63,"character":"Himself","credit_id":"52fe459c9251416c7505c68f","gender":2,"id":30051,"name":"Willie
+        Aames","order":62,"profile_path":"/2169knKN6EkSj7AsBEmxz3x2M0o.jpg"},{"cast_id":64,"character":"Himself","credit_id":"52fe459c9251416c7505c693","gender":2,"id":75339,"name":"Fred
+        Berry","order":63,"profile_path":"/6LKi0UwgQDQaf4nw9oUICNbUOsi.jpg"},{"cast_id":65,"character":"Himself","credit_id":"52fe459c9251416c7505c697","gender":2,"id":75340,"name":"Todd
+        Bridges","order":64,"profile_path":"/7LvEvGyLNhObut64kl2UdNLq347.jpg"},{"cast_id":66,"character":"Himself","credit_id":"52fe459c9251416c7505c69b","gender":2,"id":75341,"name":"Gary
+        Coleman","order":65,"profile_path":"/4cglDNA5XjTv4tkW2beolc0uqpO.jpg"},{"cast_id":67,"character":"Himself","credit_id":"52fe459c9251416c7505c69f","gender":2,"id":8894,"name":"Jeff
+        Conaway","order":66,"profile_path":"/5LSFAaWqppiYSJmikXciybmuFat.jpg"},{"cast_id":68,"character":"Himself","credit_id":"52fe459c9251416c7505c6a3","gender":2,"id":17444,"name":"Corey
+        Haim","order":67,"profile_path":"/ygcYkFPIzXTbwYN9udzJpJOeKlo.jpg"},{"cast_id":69,"character":"Himself","credit_id":"52fe459c9251416c7505c6a7","gender":2,"id":75342,"name":"Tony
+        Dow","order":68,"profile_path":"/b1j04svpGN0YVJFKC8UukUutDRi.jpg"},{"cast_id":70,"character":"Herself","credit_id":"52fe459c9251416c7505c6ab","gender":1,"id":75343,"name":"Florence
+        Henderson","order":69,"profile_path":"/kPocXZlkyTeNdbXf3iMT0yVFGFT.jpg"},{"cast_id":71,"character":"Himself","credit_id":"52fe459c9251416c7505c6af","gender":2,"id":12097,"name":"Christopher
+        Knights","order":70,"profile_path":"/lY4SomC77NUlqPWSmhzvqLfIn8R.jpg"},{"cast_id":72,"character":"Himself","credit_id":"52fe459c9251416c7505c6b3","gender":2,"id":75344,"name":"Barry
+        Livingston","order":71,"profile_path":"/3zcKDmYcOv18c4VxIoPqLuQbmen.jpg"},{"cast_id":73,"character":"Himself","credit_id":"52fe459c9251416c7505c6b7","gender":2,"id":75345,"name":"Mike
+        Lookinland","order":72,"profile_path":"/mZQGI17w86vlKI5ZjYSJqzZfcit.jpg"},{"cast_id":74,"character":"Herself","credit_id":"52fe459c9251416c7505c6bb","gender":1,"id":75346,"name":"Maureen
+        McCormick","order":73,"profile_path":"/hvUBHftiXW2sND624neqdGC6Hxm.jpg"},{"cast_id":75,"character":"Himself","credit_id":"52fe459c9251416c7505c6bf","gender":2,"id":75347,"name":"Eddie
+        Mekka","order":74,"profile_path":"/plhideTTymVWi47Wyp81DNaeGlI.jpg"},{"cast_id":76,"character":"Himself","credit_id":"52fe459c9251416c7505c6c3","gender":2,"id":75348,"name":"Jeremy
+        Miller","order":75,"profile_path":"/nJrQboYfyY0cYwMnK1sknFzpPK4.jpg"},{"cast_id":77,"character":"Herself","credit_id":"52fe459c9251416c7505c6c7","gender":1,"id":75349,"name":"Erin
+        Moran","order":76,"profile_path":"/xipbY0i9JXmxXAqpoivXLijlqxH.jpg"},{"cast_id":78,"character":"Himself","credit_id":"52fe459c9251416c7505c6cb","gender":2,"id":75350,"name":"Haywood
+        Nelson","order":77,"profile_path":null},{"cast_id":79,"character":"Himself","credit_id":"52fe459c9251416c7505c6cf","gender":2,"id":75351,"name":"Jay
+        North","order":78,"profile_path":"/3NLDfYondmYCxjQpR4Qa67AHYNl.jpg"},{"cast_id":80,"character":"Himself","credit_id":"52fe459c9251416c7505c6d3","gender":2,"id":75352,"name":"Ron
+        Palillo","order":79,"profile_path":null},{"cast_id":81,"character":"Himself","credit_id":"52fe459c9251416c7505c6d7","gender":2,"id":35686,"name":"Butch
+        Patrick","order":80,"profile_path":"/wm2urgDBp4mWUocnME07zp9PIBe.jpg"},{"cast_id":82,"character":"Himself","credit_id":"52fe459c9251416c7505c6db","gender":0,"id":58477,"name":"Jonathan
+        Loughran","order":81,"profile_path":"/jNXgI1GRWJ1qquFkloj484rujAJ.jpg"},{"cast_id":83,"character":"Himself","credit_id":"52fe459c9251416c7505c6df","gender":2,"id":20819,"name":"Peter
+        Dante","order":82,"profile_path":null},{"cast_id":84,"character":"Himself","credit_id":"52fe459c9251416c7505c6e3","gender":2,"id":16763,"name":"Paul
+        Petersen","order":83,"profile_path":"/s1SFxYNs93lmFghL1F91KrHkA0d.jpg"},{"cast_id":85,"character":"Himself","credit_id":"52fe459c9251416c7505c6e7","gender":2,"id":75353,"name":"Adam
+        Rich","order":84,"profile_path":null},{"cast_id":86,"character":"Himself","credit_id":"52fe459c9251416c7505c6eb","gender":2,"id":75354,"name":"Rodney
+        Allen Rippy","order":85,"profile_path":null},{"cast_id":87,"character":"Herself","credit_id":"52fe459c9251416c7505c6ef","gender":1,"id":75355,"name":"Marion
+        Ross","order":86,"profile_path":"/eZpOYvFoJnej8n7aKSi2LVvvlQu.jpg"},{"cast_id":88,"character":"Himself","credit_id":"52fe459c9251416c7505c6f3","gender":2,"id":75356,"name":"Ernest
+        Lee Thomas","order":87,"profile_path":"/6pWFALh11hZWcWTbi2YiEvpXgTu.jpg"},{"cast_id":89,"character":"Herself","credit_id":"52fe459c9251416c7505c6f7","gender":1,"id":21862,"name":"Charlene
+        Tilton","order":88,"profile_path":"/uLKDISmKEibqGYhjFmgspdKRiPM.jpg"},{"cast_id":118,"character":"Maitre''
+        D","credit_id":"545f9b580e0a264d60002571","gender":2,"id":178926,"name":"Michael
+        McDonald","order":89,"profile_path":"/lcpcdgwwSl6tuZvkgPReWEybdzM.jpg"},{"cast_id":130,"character":"Brendan
+        Fraser","credit_id":"5ab7428a925141395501671c","gender":2,"id":18269,"name":"Brendan
+        Fraser","order":90,"profile_path":"/n8VOWXp94nhIEo5nS9o6bOpUHiN.jpg"},{"cast_id":131,"character":"5th
+        Grade Boy","credit_id":"5b03c55a92514109c9028456","gender":2,"id":2047966,"name":"Jesse
+        Rutherford","order":91,"profile_path":"/3TGRIKNCISFl19wzi5FnyOvgziH.jpg"}],"crew":[{"credit_id":"52fe459c9251416c7505c745","department":"Production","gender":2,"id":561,"job":"Casting","name":"John
+        Papsidera","profile_path":"/egwEVyrAmdWhtuLqE5fcThZf41E.jpg"},{"credit_id":"5eb3bad6c3514c001f5475fc","department":"Sound","gender":1,"id":13168,"job":"Dialogue
+        Editor","name":"Victoria Rose Sampson","profile_path":null},{"credit_id":"52fe459c9251416c7505c73f","department":"Editing","gender":2,"id":17164,"job":"Editor","name":"Roger
+        Bondelli","profile_path":null},{"credit_id":"52fe459c9251416c7505c757","department":"Art","gender":1,"id":33711,"job":"Set
+        Decoration","name":"K.C. Fox","profile_path":null},{"credit_id":"52fe459c9251416c7505c721","department":"Production","gender":2,"id":19292,"job":"Producer","name":"Adam
+        Sandler","profile_path":"/rUaw3hLRxK4T9Vp9yS1YxQ2PgnT.jpg"},{"credit_id":"52fe459c9251416c7505c715","department":"Production","gender":2,"id":20821,"job":"Producer","name":"Jack
+        Giarraputo","profile_path":"/yfnxGdFZS17nZxNX39TNh4URC11.jpg"},{"credit_id":"52fe459c9251416c7505c751","department":"Art","gender":2,"id":11374,"job":"Art
+        Direction","name":"Marc Dabe","profile_path":null},{"credit_id":"52fe459c9251416c7505c75d","department":"Art","gender":2,"id":22029,"job":"Art
+        Direction","name":"David M. Haber","profile_path":null},{"credit_id":"587811dac3a36850f200d2d3","department":"Sound","gender":2,"id":23486,"job":"Original
+        Music Composer","name":"Christophe Beck","profile_path":"/d8dCWjUXzweK1hyC1VQa0sjWWcd.jpg"},{"credit_id":"52fe459c9251416c7505c74b","department":"Art","gender":0,"id":11373,"job":"Production
+        Design","name":"Dina Lipton","profile_path":null},{"credit_id":"548594269251416a72002a5b","department":"Camera","gender":2,"id":11371,"job":"Director
+        of Photography","name":"Thomas E. Ackerman","profile_path":null},{"credit_id":"52fe459c9251416c7505c763","department":"Costume
+        & Make-Up","gender":1,"id":51693,"job":"Costume Design","name":"Lisa Jensen","profile_path":null},{"credit_id":"52fe459c9251416c7505c6fd","department":"Directing","gender":2,"id":54967,"job":"Director","name":"Sam
+        Weisman","profile_path":null},{"credit_id":"5878187a92514178610002d0","department":"Sound","gender":0,"id":71130,"job":"Music
+        Supervisor","name":"Michael Dilbeck","profile_path":null},{"credit_id":"587811f8925141104400cff7","department":"Sound","gender":2,"id":60150,"job":"Original
+        Music Composer","name":"Waddy Wachtel","profile_path":null},{"credit_id":"52fe459c9251416c7505c709","department":"Writing","gender":2,"id":60950,"job":"Screenplay","name":"David
+        Spade","profile_path":"/8tv638lAMLmYh8bSLICqPzbW3tv.jpg"},{"credit_id":"52fe459c9251416c7505c70f","department":"Production","gender":0,"id":65913,"job":"Producer","name":"M.
+        Blair Breard","profile_path":null},{"credit_id":"52fe459c9251416c7505c703","department":"Writing","gender":2,"id":66563,"job":"Screenplay","name":"Fred
+        Wolf","profile_path":"/64Klcur18Q3eTZ4tTPiOnWrufU5.jpg"},{"credit_id":"52fe459c9251416c7505c727","department":"Production","gender":2,"id":66563,"job":"Executive
+        Producer","name":"Fred Wolf","profile_path":"/64Klcur18Q3eTZ4tTPiOnWrufU5.jpg"},{"credit_id":"52fe459d9251416c7505c78d","department":"Production","gender":0,"id":74567,"job":"Unit
+        Production Manager","name":"David Witz","profile_path":null},{"credit_id":"58781965c3a3683eda00035b","department":"Sound","gender":0,"id":74978,"job":"Sound
+        Re-Recording Mixer","name":"Terry Porter","profile_path":null},{"credit_id":"52fe459c9251416c7505c71b","department":"Production","gender":2,"id":75362,"job":"Producer","name":"Tom
+        McNulty","profile_path":null},{"credit_id":"52fe459c9251416c7505c769","department":"Costume
+        & Make-Up","gender":0,"id":75373,"job":"Makeup Artist","name":"Corrina Duran","profile_path":null},{"credit_id":"52fe459c9251416c7505c76f","department":"Costume
+        & Make-Up","gender":0,"id":75374,"job":"Makeup Artist","name":"Felicia Linsky","profile_path":null},{"credit_id":"52fe459c9251416c7505c775","department":"Costume
+        & Make-Up","gender":2,"id":75375,"job":"Makeup Artist","name":"Joel Harlow","profile_path":"/tC8VpeOUQHkpPintf1Jaao2Igsg.jpg"},{"credit_id":"52fe459c9251416c7505c77b","department":"Costume
+        & Make-Up","gender":0,"id":75376,"job":"Hairstylist","name":"Jacklin Masteran","profile_path":null},{"credit_id":"52fe459d9251416c7505c781","department":"Costume
+        & Make-Up","gender":1,"id":75377,"job":"Makeup Department Head","name":"Ann
+        Pala","profile_path":null},{"credit_id":"52fe459d9251416c7505c787","department":"Costume
+        & Make-Up","gender":0,"id":75378,"job":"Hairstylist","name":"Thomas Real","profile_path":null},{"credit_id":"52fe459d9251416c7505c79f","department":"Sound","gender":2,"id":75380,"job":"Boom
+        Operator","name":"Robert Jackson","profile_path":null},{"credit_id":"58781970925141785c0003ed","department":"Sound","gender":2,"id":83091,"job":"Sound
+        Re-Recording Mixer","name":"Dean A. Zupancic","profile_path":null},{"credit_id":"587819ae9251417864000411","department":"Sound","gender":0,"id":1400558,"job":"Supervising
+        Sound Editor","name":"Robert L. Sephton","profile_path":null},{"credit_id":"5878181dc3a3683edd0002aa","department":"Camera","gender":2,"id":1401806,"job":"Still
+        Photographer","name":"Mark Fellman","profile_path":null},{"credit_id":"587819f392514178610003e3","department":"Sound","gender":0,"id":1415617,"job":"Sound
+        Effects Editor","name":"Adam Kopald","profile_path":null},{"credit_id":"5878193592514178530003a3","department":"Sound","gender":0,"id":1546086,"job":"Sound
+        Mixer","name":"David Kelson","profile_path":null}]}'
+  recorded_at: Thu, 27 Aug 2020 02:03:45 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/13778/reviews?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '68'
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - d15feaf6acacab017db71d6ce6c3b8d6
+      X-Memc-Age:
+      - '2507'
+      X-Memc-Expires:
+      - '19093'
+      Etag:
+      - W/"ba5343698a46a0a58aea76585c37cb53"
+      Last-Modified:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 5454d86d310d617ffa6cdf566f06caaf.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ATL50-C1
+      X-Amz-Cf-Id:
+      - Pu0-fFjn3cPnL3TzygiJJmrWJPTD3nZu7DzQB3VgGOY-BTfd4fH7xA==
+    body:
+      encoding: UTF-8
+      string: '{"id":13778,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Thu, 27 Aug 2020 02:03:45 GMT
+- request:
+    method: get
+    uri: https://api.themoviedb.org/3/movie/13778/reviews?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - Faraday v1.0.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '68'
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      Server:
+      - openresty
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, HEAD, POST, PUT, DELETE, OPTIONS
+      Access-Control-Expose-Headers:
+      - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
+        Content-Length, Content-Range
+      Cache-Control:
+      - public, max-age=21600
+      X-Memc:
+      - HIT
+      X-Memc-Key:
+      - d15feaf6acacab017db71d6ce6c3b8d6
+      X-Memc-Age:
+      - '2507'
+      X-Memc-Expires:
+      - '19093'
+      Etag:
+      - W/"ba5343698a46a0a58aea76585c37cb53"
+      Last-Modified:
+      - Thu, 27 Aug 2020 02:03:45 GMT
+      X-Cache:
+      - Hit from cloudfront
+      Via:
+      - 1.1 bdfadbcce109f306fa4c32de9317b396.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - ATL50-C1
+      X-Amz-Cf-Id:
+      - GSSwWMDDyqdykbfXJ8JUb3xM9QQLJNOLcFEotrxRfwN-ONL_56As4A==
+    body:
+      encoding: UTF-8
+      string: '{"id":13778,"page":1,"results":[],"total_pages":0,"total_results":0}'
+  recorded_at: Thu, 27 Aug 2020 02:03:45 GMT
+recorded_with: VCR 6.0.0

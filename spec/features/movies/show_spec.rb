@@ -6,9 +6,7 @@ RSpec.describe 'As an authenticated user' do
   end
 
   describe 'movie details page' do
-    # skipped this test bc css matchers aren't working
-    # post implementing JS
-    xit 'I should see a button to create a viewing party, and I should see the following info:
+    it 'I should see a button to create a viewing party, and I should see the following info:
     - movie title
     - vote avg
     - runtime in hours and minutes
@@ -18,12 +16,12 @@ RSpec.describe 'As an authenticated user' do
     - count of total reviews
     - each review author and info' do
 
-      VCR.use_cassette('first_of_top_forty_movies') do
-        visit discover_path
-        click_on "Find Top Rated Movies"
-        expect(current_path).to eq(movies_path)
-
-        find('.movie-title', match: :first).click
+      VCR.use_cassette('dickie_roberts_movie_detail_page') do
+        # visit discover_path
+        # click_on "Find Top Rated Movies"
+        # expect(current_path).to eq(movies_path)
+        visit movies_detail_path({id: 13778})
+        # find('.movie-title', match: :first).click
         expect(current_path).to eq(movies_detail_path)
         expect(page).to have_button("New Viewing Party")
 

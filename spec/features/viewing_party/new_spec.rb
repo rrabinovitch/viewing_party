@@ -70,6 +70,7 @@ RSpec.describe 'As an authenticated user' do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(friend1)
         visit dashboard_path
         expect(page).to have_content("Dickie Roberts: Former Child Star")
+        # expect(page).to have_button("Add to Calendar")
       end
     end
   end

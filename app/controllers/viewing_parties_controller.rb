@@ -7,6 +7,7 @@ class ViewingPartiesController < ApplicationController
   end
 
   def create
+    binding.pry
     # instead, create party separately (without user id)
     # then create the join table entires with current_user, host: true
     party = Party.create(party_params)
@@ -17,15 +18,32 @@ class ViewingPartiesController < ApplicationController
       end
     end
     UserParty.create(party_id: party.id, attendee_id: current_user.id, is_host: true)
-    # add to Google Cal
+    create_google_calendar_event(party.movie)
     redirect_to dashboard_path
   end
 
   private
 
   def party_params
-    params.permit(:movie_id, :duration, :date)
+    params.permit(:movie_id, :duration, :date, :time)
   end
+
+  def create_google_calendar_event(movie_title) #add , start_datetime, end_datetime args
+    event = Google::Apis::CalendarV3::Event.new({
+      summary: "#{movie_title} Watch Party",
+      start: Google::Apis::CalendarV3::EventDateTime.new(
+        date_time: '2015-05-28T09:00:00-07:00',
+        time_zone: 'America/Los_Angeles'
+        ),
+      end: Google::Apis::CalendarV3::EventDateTime.new(
+        date_time: '2015-05-28T17:00:00-07:00',
+        time_zone: 'America/Los_Angeles'
+        )
+      })
+
+  end
+
+
 
   # def google_secret
   #   Google::APIClient::ClientSecrets.new(

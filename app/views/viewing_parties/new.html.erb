@@ -9,7 +9,10 @@
   <%= number_field_tag :duration, @movie.runtime %> <br>
 
   <%= label_tag :date, "Date:" %>
-  <%= date_field_tag :date %> <br><br>
+  <%= date_field_tag :date %> <br>
+
+  <%= label_tag :time, "Time:" %>
+  <%= time_field_tag :time %> <br><br>
 
   <%= label_tag :friends, "Select the friends you'd like to invite to your viewing party:" %> <br>
   <% if current_user.friends.empty? %>

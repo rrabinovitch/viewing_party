@@ -1,4 +1,4 @@
-<%= button_to "Find Top Rated Movies", discover_path({q: "toprated"}), remote: true, method: :get %>
+<%= button_to "Find Top Rated Movies", discover_path, remote: true, method: :get, params: {q: "toprated"} %>
 
 <%= form_tag discover_path, remote: true, method: :get do %>
   <%= text_field_tag :movie_keywords %>

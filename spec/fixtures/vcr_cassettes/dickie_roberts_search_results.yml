@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Thu, 27 Aug 2020 01:43:32 GMT
+      - Thu, 27 Aug 2020 00:19:08 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,14 +42,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 cc3282f0c721d56a39bd8ba3aa575b67.cloudfront.net (CloudFront)
+      - 1.1 6cab218159221ab723900fb6fe65d73f.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ATL50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
-      - 4YVhA5UTbc1Z5QDtNcUfsndk9fpaEUPYjKsPRB2qdSnma0c54nwKgg==
+
+      - PYYQ18ypHWfHuB57Ze1Hc76URjWDLMmt1oHktZNe-7z_TRxB7LWJ1Q==
     body:
       encoding: ASCII-8BIT
-      string: '{"page":1,"total_results":1,"total_pages":1,"results":[{"popularity":12.6,"id":13778,"video":false,"vote_count":130,"vote_average":5.1,"title":"Dickie
+      string: '{"page":1,"total_results":1,"total_pages":1,"results":[{"popularity":9.659,"id":13778,"video":false,"vote_count":129,"vote_average":5.1,"title":"Dickie
         Roberts: Former Child Star","release_date":"2003-09-05","original_language":"en","original_title":"Dickie
         Roberts: Former Child Star","genre_ids":[35],"backdrop_path":"\/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","adult":false,"overview":"TV
         child star of the ''70s, Dickie Roberts is now 35 and parking cars. Craving
@@ -57,7 +58,7 @@ http_interactions:
         director quickly sees he is anything but normal. Desperate to win the part,
         Dickie hires a family to help him replay his childhood and assume the identity
         of an average, everyday kid.","poster_path":"\/6dgCPSVEEMU2BLvxOzBAvkQjIeL.jpg"}]}'
-  recorded_at: Thu, 27 Aug 2020 01:43:32 GMT
+  recorded_at: Thu, 27 Aug 2020 00:19:08 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US&page=2&query=Dickie%20Roberts
@@ -82,6 +83,8 @@ http_interactions:
       - '57'
       Connection:
       - keep-alive
+      Date:
+      - Thu, 27 Aug 2020 00:19:08 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -100,15 +103,15 @@ http_interactions:
       X-Cache:
       - RefreshHit from cloudfront
       Via:
-      - 1.1 81967fd0988948662c44f29b5412bafe.cloudfront.net (CloudFront)
+      - 1.1 dc50b0effd72a7b2c19bcb0909cfae82.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ATL50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
-      - Dw9uYTFqbkCtYNfeGR0DaNPhLC7UMOfrIDxyStpIVCubFVMXu26y9Q==
+      - I-e0FBuwUZhqXv_CxWEp9o4CjOMflqIjY7mt5QH5lYHWqV8_pMe3BA==
     body:
       encoding: UTF-8
       string: '{"page":2,"total_results":1,"total_pages":1,"results":[]}'
-  recorded_at: Thu, 27 Aug 2020 01:43:32 GMT
+  recorded_at: Thu, 27 Aug 2020 00:19:08 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/13778?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
@@ -144,30 +147,33 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
-      Cache-Control:
-      - public, max-age=21600
       X-Memc:
       - HIT
       X-Memc-Key:
       - 0c3239fffa5f2643b8b9b013d597efd0
       X-Memc-Age:
-      - '16348'
+
+      - '13361'
       X-Memc-Expires:
-      - '5252'
+      - '8239'
+      Last-Modified:
+      - Wed, 26 Aug 2020 16:53:43 GMT
+      Date:
+      - Thu, 27 Aug 2020 00:19:09 GMT
+      Cache-Control:
+      - public, max-age=21600
       Etag:
       - W/"07ec01a62bb10dffeea2e6ade351f657"
-      Last-Modified:
-      - Thu, 27 Aug 2020 00:16:37 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
-      - Hit from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 5454d86d310d617ffa6cdf566f06caaf.cloudfront.net (CloudFront)
+      - 1.1 6d9f09528e589f3fa7ca05f965ea37a2.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - ATL50-C1
+      - DEN50-C2
       X-Amz-Cf-Id:
-      - 0mmtAJz4twEWTFCK50cl0Mc8HFCfLeH4OmcvHJ-Ylnikk92CZE8HQw==
+      - OqKW7P4hlpfAjJdyCv3m2mgsuZHXBmrZ3aNGtzZKZ_nQvqBlkCSvQw==
       Age:
       - '5215'
     body:
@@ -182,5 +188,5 @@ http_interactions:
         States of America"}],"release_date":"2003-09-05","revenue":0,"runtime":98,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"50
         million people used to watch him on TV. Now he washes their cars.","title":"Dickie
         Roberts: Former Child Star","video":false,"vote_average":5.1,"vote_count":130}'
-  recorded_at: Thu, 27 Aug 2020 01:43:32 GMT
+  recorded_at: Thu, 27 Aug 2020 00:19:09 GMT
 recorded_with: VCR 6.0.0

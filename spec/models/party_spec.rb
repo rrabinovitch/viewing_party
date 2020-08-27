@@ -1,10 +1,16 @@
 RSpec.describe Party do
-  # it { should validate_presence_of :movie_id }
-  # it { should validate_presence_of :user_id }
-  # it { should validate_presence_of :duration }
-  # it { should validate_presence_of :date }
+  describe 'relationships' do
+    it { should have_many :user_parties }
+    it { should have_many(:attendees).through(:user_parties) }
+  end
 
-  # this isn't working because the reference is to 'host' in party.rb
-  # host_id doesn't register as being a column of foreign keys
-  # it { should belong_to :user }
+  describe 'instance methods' do
+    it '#movie' do
+      VCR.use_cassette('find_dickie_roberts_by_id') do
+        party = Party.create!(movie_id: 13778, duration: 200, date: "2020-08-28")
+
+        expect(party.movie).to eq("Dickie Roberts: Former Child Star")
+      end 
+    end
+  end
 end

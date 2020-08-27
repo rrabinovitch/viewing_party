@@ -8,7 +8,7 @@ Viewing party is an application in which users can explore movie options and cre
 * [Gaby Mendez](https://github.com/gabichuelas)
 * [Ruthie Rabinovitch](https://github.com/rrabinovitch)
 
-## Local Setup
+### Local Setup
 
 1. Fork and Clone the repo
 2. Obtain API key from [TMDB](https://developers.themoviedb.org/3/getting-started/introduction)
@@ -19,7 +19,7 @@ Viewing party is an application in which users can explore movie options and cre
 7. Run test suite: `bundle exec rspec`
 
 
-## Languages, Frameworks, and Technologies
+### Languages, Frameworks, and Technologies
 
 - Ruby 2.5.3
 - Rails 5.2.4.3
@@ -27,3 +27,6 @@ Viewing party is an application in which users can explore movie options and cre
 - PostgreSQL
 - TravisCI
 - Heroku
+
+### ERD
+![ERD](https://user-images.githubusercontent.com/62635544/91383174-ba2a8880-e7e8-11ea-83ba-e056218b16a2.png)

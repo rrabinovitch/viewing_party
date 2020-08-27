@@ -12,8 +12,3 @@
 //
 //= require rails-ujs
 //= require_tree .
-
-function showResults() {
-  var results = document.getElementById("search-results")
-  
-}

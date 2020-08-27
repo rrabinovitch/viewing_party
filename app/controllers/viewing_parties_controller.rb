@@ -17,44 +17,19 @@ class ViewingPartiesController < ApplicationController
 
     UserParty.create(party_id: party.id, attendee_id: current_user.id, is_host: true)
 
-    calendar = Google::Apis::CalendarV3
-    client = calendar::CalendarService.new
-
-    client.authorization = google_secret.to_authorization
-
-    event = Google::Apis::CalendarV3::Event.new(
-      summary: "#{party.movie} Viewing Party",
-      start: Google::Apis::CalendarV3::EventDateTime.new(
-        date: params[:date]
-      ),
-      end: Google::Apis::CalendarV3::EventDateTime.new(
-        date: params[:date] # fix end time to reflect duration
-      )
-    )
-
-    result = client.insert_event('primary', event)
-
-    redirect_to dashboard_path
+    if party.save
+      GoogleCalService.new.create_event(current_user, party)
+      redirect_to dashboard_path
+      flash[:success] = "Viewing party created for #{party.movie} on #{party.date}"
+    else
+      render :new
+      flash[:error] = party.errors.full_messages.to_sentence
+    end
   end
 
   private
 
   def party_params
     params.permit(:movie_id, :duration, :date, :time)
-  end
-
-  # def create_google_cal_event ## to refactor out of #create action
-  # end
-
-  def google_secret
-    Google::APIClient::ClientSecrets.new(
-      { "web" =>
-        { "access_token" => current_user.token,
-          "refresh_token" => current_user.refresh_token,
-          "client_id" => ENV['GOOGLE_CLIENT_ID'],
-          "client_secret" => ENV['GOOGLE_CLIENT_SECRET']
-        }
-      }
-    )
   end
 end

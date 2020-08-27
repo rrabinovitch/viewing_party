@@ -1,6 +1,7 @@
 RSpec.describe 'As an authenticated user' do
   before :each do
     @current_user = User.create(user_id: '7777', username: 'gaby@gmail.com', token: '1234gaby', refresh_token: 'gaby1234')
+    @movie_id = 13778
 
     allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(@current_user)
   end
@@ -13,7 +14,7 @@ RSpec.describe 'As an authenticated user' do
         @current_user.friends << friend1
         @current_user.friends << friend2
 
-        visit viewing_parties_new_path({movie_id: 13778})
+        visit viewing_parties_new_path({movie_id: @movie_id})
 
         expect(page).to have_css(".movie-title")
         expect(page).to have_selector("#duration")
@@ -29,7 +30,7 @@ RSpec.describe 'As an authenticated user' do
 
     it 'Without friends: When I click the button to create a viewing party, I\'m redirected to a new viewing party form' do
       VCR.use_cassette('find_dickie_roberts_by_id') do
-        visit viewing_parties_new_path({movie_id: 13778})
+        visit viewing_parties_new_path({movie_id: @movie_id})
 
         expect(page).to have_css(".movie-title")
         expect(page).to have_selector("#duration")
@@ -51,7 +52,7 @@ RSpec.describe 'As an authenticated user' do
         @current_user.friends << friend1
         @current_user.friends << friend2
 
-        visit viewing_parties_new_path({movie_id: 13778})
+        visit viewing_parties_new_path({movie_id: @movie_id})
 
         fill_in :duration, with: 200
         fill_in :date, with: '2020/09/01'

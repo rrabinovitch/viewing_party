@@ -4,9 +4,11 @@
 
 Viewing party is an application in which users can explore movie options and create a viewing party event for the user and their friends. Users access the site via Google OAuth, which also allows them to add viewing party events to their Google Calendar. Users may add friends to their account by searching GMail account names that are associated with other existing application accounts. [TMDB API](https://www.themoviedb.org/) is used to access movie info via a "40 Top Rated" search and a keyword search.
 
-### Team
+### Team & Reflections
 * [Gaby Mendez](https://github.com/gabichuelas)
 * [Ruthie Rabinovitch](https://github.com/rrabinovitch)
+
+The main learnings from this project came from learning, managing, and integrating several new technologies and concepts at once, while keeping OOP principles top of mind: Travis CI's integration with Heroku, API consumption and refactoring, new types of mocks and and stubs, OAuth and scopes, RuboCop's style guide, etc. There is still much learning to be done in order to reach deeper levels of understanding and comfort with all of these technologies and concepts in conjunction with each other, but we feel excited about how much we've learned in the course of the ten quick days during which we executed this project.
 
 ### Local Setup
 

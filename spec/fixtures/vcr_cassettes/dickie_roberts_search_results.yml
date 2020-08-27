@@ -25,7 +25,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 25 Aug 2020 20:44:26 GMT
+      - Thu, 27 Aug 2020 01:43:32 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -42,14 +42,14 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 ecad4961c5422bf2ef70d00a4d30abdb.cloudfront.net (CloudFront)
+      - 1.1 cc3282f0c721d56a39bd8ba3aa575b67.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - ATL50-C1
       X-Amz-Cf-Id:
-      - ZE4iIsYMdtNbqKY4kJ6gz4VAle0uotm7_qi5kw5DUAQ4ZuHEyNzAmg==
+      - 4YVhA5UTbc1Z5QDtNcUfsndk9fpaEUPYjKsPRB2qdSnma0c54nwKgg==
     body:
       encoding: ASCII-8BIT
-      string: '{"page":1,"total_results":1,"total_pages":1,"results":[{"popularity":9.718,"id":13778,"video":false,"vote_count":129,"vote_average":5.1,"title":"Dickie
+      string: '{"page":1,"total_results":1,"total_pages":1,"results":[{"popularity":12.6,"id":13778,"video":false,"vote_count":130,"vote_average":5.1,"title":"Dickie
         Roberts: Former Child Star","release_date":"2003-09-05","original_language":"en","original_title":"Dickie
         Roberts: Former Child Star","genre_ids":[35],"backdrop_path":"\/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","adult":false,"overview":"TV
         child star of the ''70s, Dickie Roberts is now 35 and parking cars. Craving
@@ -57,7 +57,7 @@ http_interactions:
         director quickly sees he is anything but normal. Desperate to win the part,
         Dickie hires a family to help him replay his childhood and assume the identity
         of an average, everyday kid.","poster_path":"\/6dgCPSVEEMU2BLvxOzBAvkQjIeL.jpg"}]}'
-  recorded_at: Tue, 25 Aug 2020 20:44:26 GMT
+  recorded_at: Thu, 27 Aug 2020 01:43:32 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US&page=2&query=Dickie%20Roberts
@@ -82,8 +82,6 @@ http_interactions:
       - '57'
       Connection:
       - keep-alive
-      Date:
-      - Tue, 25 Aug 2020 20:44:26 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -93,22 +91,24 @@ http_interactions:
       Access-Control-Expose-Headers:
       - ETag, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, Retry-After,
         Content-Length, Content-Range
+      Date:
+      - Thu, 27 Aug 2020 01:43:32 GMT
       Etag:
       - 2bb8cfc3a3e9bf88239773a4c0bdedfc
       Cache-Control:
       - public, max-age=120
       X-Cache:
-      - Miss from cloudfront
+      - RefreshHit from cloudfront
       Via:
-      - 1.1 6557de2baa14a4c6cf902c4fc594506a.cloudfront.net (CloudFront)
+      - 1.1 81967fd0988948662c44f29b5412bafe.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - ATL50-C1
       X-Amz-Cf-Id:
-      - Jn88Ex-Boz434C92pSx3slrgM8PfE0zazMsxJBrjhfuzz8W4HVzFQw==
+      - Dw9uYTFqbkCtYNfeGR0DaNPhLC7UMOfrIDxyStpIVCubFVMXu26y9Q==
     body:
       encoding: UTF-8
       string: '{"page":2,"total_results":1,"total_pages":1,"results":[]}'
-  recorded_at: Tue, 25 Aug 2020 20:44:26 GMT
+  recorded_at: Thu, 27 Aug 2020 01:43:32 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/movie/13778?api_key=<MOVIE_DB_API_KEY_V3>&language=en-US
@@ -134,7 +134,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 25 Aug 2020 20:37:55 GMT
+      - Thu, 27 Aug 2020 00:16:37 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -151,25 +151,25 @@ http_interactions:
       X-Memc-Key:
       - 0c3239fffa5f2643b8b9b013d597efd0
       X-Memc-Age:
-      - '13448'
+      - '16348'
       X-Memc-Expires:
-      - '8152'
+      - '5252'
       Etag:
-      - W/"3ace03eb93dc981f78e95e13cb497bf3"
+      - W/"07ec01a62bb10dffeea2e6ade351f657"
       Last-Modified:
-      - Tue, 25 Aug 2020 20:37:55 GMT
+      - Thu, 27 Aug 2020 00:16:37 GMT
       Vary:
       - Accept-Encoding
       X-Cache:
       - Hit from cloudfront
       Via:
-      - 1.1 81967fd0988948662c44f29b5412bafe.cloudfront.net (CloudFront)
+      - 1.1 5454d86d310d617ffa6cdf566f06caaf.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
       - ATL50-C1
       X-Amz-Cf-Id:
-      - VO61M6oDqM8AxbE0JPbb1DTpvCSDKFijqCG3iEILWIZsf74epQdStQ==
+      - 0mmtAJz4twEWTFCK50cl0Mc8HFCfLeH4OmcvHJ-Ylnikk92CZE8HQw==
       Age:
-      - '391'
+      - '5215'
     body:
       encoding: ASCII-8BIT
       string: '{"adult":false,"backdrop_path":"/cubZdqcu2VdIBhlLCaJqFStFkO8.jpg","belongs_to_collection":null,"budget":0,"genres":[{"id":35,"name":"Comedy"}],"homepage":"","id":13778,"imdb_id":"tt0325258","original_language":"en","original_title":"Dickie
@@ -177,10 +177,10 @@ http_interactions:
         Roberts is now 35 and parking cars. Craving to regain the spotlight, he auditions
         for a role of a normal guy, but the director quickly sees he is anything but
         normal. Desperate to win the part, Dickie hires a family to help him replay
-        his childhood and assume the identity of an average, everyday kid.","popularity":9.718,"poster_path":"/6dgCPSVEEMU2BLvxOzBAvkQjIeL.jpg","production_companies":[{"id":2608,"logo_path":"/g3YRudXiQzHesQqRXvnhFpMzfkU.png","name":"Happy
+        his childhood and assume the identity of an average, everyday kid.","popularity":9.659,"poster_path":"/6dgCPSVEEMU2BLvxOzBAvkQjIeL.jpg","production_companies":[{"id":2608,"logo_path":"/g3YRudXiQzHesQqRXvnhFpMzfkU.png","name":"Happy
         Madison Productions","origin_country":"US"},{"id":4,"logo_path":"/fycMZt242LVjagMByZOLUGbCvv3.png","name":"Paramount","origin_country":"US"}],"production_countries":[{"iso_3166_1":"US","name":"United
         States of America"}],"release_date":"2003-09-05","revenue":0,"runtime":98,"spoken_languages":[{"iso_639_1":"en","name":"English"}],"status":"Released","tagline":"50
         million people used to watch him on TV. Now he washes their cars.","title":"Dickie
-        Roberts: Former Child Star","video":false,"vote_average":5.1,"vote_count":129}'
-  recorded_at: Tue, 25 Aug 2020 20:44:26 GMT
+        Roberts: Former Child Star","video":false,"vote_average":5.1,"vote_count":130}'
+  recorded_at: Thu, 27 Aug 2020 01:43:32 GMT
 recorded_with: VCR 6.0.0

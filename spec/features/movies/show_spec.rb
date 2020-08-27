@@ -16,12 +16,12 @@ RSpec.describe 'As an authenticated user' do
     - count of total reviews
     - each review author and info' do
 
-      VCR.use_cassette('first_of_top_forty_movies') do
-        visit discover_path
-        click_on "Find Top Rated Movies"
-        expect(current_path).to eq(movies_path)
-
-        find('.movie-title', match: :first).click
+      VCR.use_cassette('dickie_roberts_movie_detail_page') do
+        # visit discover_path
+        # click_on "Find Top Rated Movies"
+        # expect(current_path).to eq(movies_path)
+        visit movies_detail_path({id: 13778})
+        # find('.movie-title', match: :first).click
         expect(current_path).to eq(movies_detail_path)
         expect(page).to have_button("New Viewing Party")
 

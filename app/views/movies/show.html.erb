@@ -9,8 +9,12 @@
 <p class='genres'>Genres:</p>
 
 <ul>
-  <% @movie.genres.each do |genre| %>
-    <li><%= genre %></li>
+  <% if @movie.genres.nil? %>
+    <p>No genres listed.</p>
+  <% else %>
+    <% @movie.genres.each do |genre| %>
+      <li><%= genre %></li>
+    <% end %>
   <% end %>
 </ul>
 
